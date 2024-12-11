@@ -12,39 +12,37 @@ struct AuthView: View {
     @State var passwordString = String()
     
     var body: some View {
-        VStack(spacing: 25) {
-            Label("Sign in", image: "")
+        VStack(spacing: Constants.spacing) {
+            Label(Constants.Text.title, image: "")
                 .font(.largeTitle)
             
-            TextField("Your email", text: $loginString)
+            TextField(Constants.Text.loginPlaceholder, text: $loginString)
                 .modifier(FieldModifier())
             
-            SecureField("Your password", text: $passwordString)
+            SecureField(Constants.Text.passwordPlaceholder, text: $passwordString)
                 .modifier(FieldModifier())
             
             HStack {
-                Button("Sign up") {
+                Button(Constants.Text.signUpButton) {
                     print("Sign up")
                 }
                 .font(.callout)
                 
                 Spacer()
                 
-                Button("Forgot email?") {
+                Button((Constants.Text.helpButton)) {
                     print("Forgot email")
                 }
                 .font(.callout)
             }
             
-            Button("Sign in") {
+            Button(Constants.Text.signInButton) {
                 print("Sign in")
             }
-            .frame(width: 120)
-            .clipped()
             .modifier(CommonButtonModifier())
             
-            Label("Or continue with", image: "")
-                .font(.system(size: 18))
+            Label(Constants.Text.supportingLabel, image: "")
+                .font(.system(size: GlobalConstants.commonTextSize))
                 .opacity(0.5)
             
             Button {
@@ -56,6 +54,21 @@ struct AuthView: View {
         .padding()
         
         Spacer()
+    }
+}
+
+extension AuthView {
+    private enum Constants {
+        enum Text {
+            static let title = "Sign in"
+            static let loginPlaceholder = "Your email"
+            static let passwordPlaceholder = "Your password"
+            static let signUpButton = "Sign up"
+            static let helpButton = "Forgot email?"
+            static let signInButton = "Sign in"
+            static let supportingLabel = "Or continue with"
+        }
+        static let spacing: CGFloat = 25
     }
 }
 

@@ -12,7 +12,7 @@ struct FieldModifier: ViewModifier {
         content
             .padding()
             .font(
-                .system(size: Constants.fieldFontSize)
+                .system(size: GlobalConstants.commonTextSize)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: Constants.cornerRadius)
@@ -23,8 +23,7 @@ struct FieldModifier: ViewModifier {
 
 extension FieldModifier {
     private enum Constants {
-        static let fieldStrokeColor: Color  = .init(red: 0.7, green: 0.7, blue: 0.7)
-        static let fieldFontSize: CGFloat   = 18
-        static let cornerRadius: CGFloat    = 6
+        static let fieldStrokeColor = Color(red: 0.7, green: 0.7, blue: 0.7)
+        static let cornerRadius: CGFloat = 6
     }
 }

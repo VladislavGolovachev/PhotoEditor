@@ -11,15 +11,17 @@ struct CommonButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
+            .frame(width: Constants.width)
+            .clipped()
             .background(.blue)
             .tint(.white)
             .clipShape(.capsule)
-            .font(.system(size: Constants.buttonFontSize))
+            .font(.system(size: GlobalConstants.commonTextSize))
     }
 }
 
 extension CommonButtonModifier {
     private enum Constants {
-        static let buttonFontSize: CGFloat  = 18
+        static let width: CGFloat = 170
     }
 }

@@ -16,6 +16,7 @@
 		823CF17B2D0A18BA005AD74A /* CommonButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */; };
 		823CF1832D0A1F67005AD74A /* RegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1822D0A1F5F005AD74A /* RegistView.swift */; };
 		823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */; };
+		823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonModifier.swift; sourceTree = "<group>"; };
 		823CF1822D0A1F5F005AD74A /* RegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistView.swift; sourceTree = "<group>"; };
 		823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogo.swift; sourceTree = "<group>"; };
+		823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */,
 				823CF1512D0A08E4005AD74A /* Modules */,
 				823CF1772D0A17F6005AD74A /* Modifiers */,
+				823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */,
 			);
 			path = PhotoEditor;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */,
 				823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */,
 				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
+				823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */,
 				823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */,
 				823CF17B2D0A18BA005AD74A /* CommonButtonModifier.swift in Sources */,
 			);
