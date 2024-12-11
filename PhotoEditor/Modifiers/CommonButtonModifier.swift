@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CommonButtonModifier: ViewModifier {
+    let color: Color
+    
     func body(content: Content) -> some View {
         content
             .padding()
             .frame(width: Constants.width)
             .clipped()
-            .background(.blue)
+            .background(color)
             .tint(.white)
             .clipShape(.capsule)
             .font(.system(size: GlobalConstants.commonTextSize))

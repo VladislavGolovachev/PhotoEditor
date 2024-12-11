@@ -12,7 +12,7 @@ struct AuthView: View {
     @State var passwordString = String()
     
     var body: some View {
-        VStack(spacing: Constants.spacing) {
+        VStack(spacing: GlobalConstants.verticalSpacing) {
             Label(Constants.Text.title, image: "")
                 .font(.largeTitle)
             
@@ -24,7 +24,7 @@ struct AuthView: View {
             
             HStack {
                 Button(Constants.Text.signUpButton) {
-                    print("Sign up")
+                    RegistView()
                 }
                 .font(.callout)
                 
@@ -39,7 +39,7 @@ struct AuthView: View {
             Button(Constants.Text.signInButton) {
                 print("Sign in")
             }
-            .modifier(CommonButtonModifier())
+            .modifier(CommonButtonModifier(color: .blue))
             
             Label(Constants.Text.supportingLabel, image: "")
                 .font(.system(size: GlobalConstants.commonTextSize))
@@ -60,15 +60,14 @@ struct AuthView: View {
 extension AuthView {
     private enum Constants {
         enum Text {
-            static let title = "Sign in"
-            static let loginPlaceholder = "Your email"
-            static let passwordPlaceholder = "Your password"
-            static let signUpButton = "Sign up"
-            static let helpButton = "Forgot email?"
-            static let signInButton = "Sign in"
-            static let supportingLabel = "Or continue with"
+            static let title                = "Sign in"
+            static let loginPlaceholder     = "Email"
+            static let passwordPlaceholder  = "Password"
+            static let signUpButton         = "Sign up"
+            static let helpButton           = "Forgot email?"
+            static let signInButton         = "Sign in"
+            static let supportingLabel      = "Or continue with"
         }
-        static let spacing: CGFloat = 25
     }
 }
 

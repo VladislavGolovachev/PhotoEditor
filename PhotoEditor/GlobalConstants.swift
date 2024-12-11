@@ -8,5 +8,6 @@
 import Foundation
 
 enum GlobalConstants {
-    static let commonTextSize: CGFloat = 18
+    static let commonTextSize: CGFloat  = 18
+    static let verticalSpacing: CGFloat = 25
 }
