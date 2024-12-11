@@ -10,7 +10,7 @@ import SwiftUI
 struct CommonButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(Constants.paddingEdgeInsets)
+            .padding()
             .background(.blue)
             .tint(.white)
             .clipShape(.capsule)
@@ -20,10 +20,6 @@ struct CommonButtonModifier: ViewModifier {
 
 extension CommonButtonModifier {
     private enum Constants {
-        static let paddingEdgeInsets = EdgeInsets(top: 10,
-                                                  leading: 40,
-                                                  bottom: 10,
-                                                  trailing: 40)
-        static let buttonFontSize: CGFloat = 18
+        static let buttonFontSize: CGFloat  = 18
     }
 }

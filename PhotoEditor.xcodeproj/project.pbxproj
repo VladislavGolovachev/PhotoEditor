@@ -14,6 +14,8 @@
 		823CF1502D0A0866005AD74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1492D0A0866005AD74A /* Assets.xcassets */; };
 		823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1782D0A1814005AD74A /* FieldModifier.swift */; };
 		823CF17B2D0A18BA005AD74A /* CommonButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */; };
+		823CF1832D0A1F67005AD74A /* RegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1822D0A1F5F005AD74A /* RegistView.swift */; };
+		823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorApp.swift; sourceTree = "<group>"; };
 		823CF1782D0A1814005AD74A /* FieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldModifier.swift; sourceTree = "<group>"; };
 		823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonModifier.swift; sourceTree = "<group>"; };
+		823CF1822D0A1F5F005AD74A /* RegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistView.swift; sourceTree = "<group>"; };
+		823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,9 @@
 		823CF1532D0A08F5005AD74A /* RegistrationModule */ = {
 			isa = PBXGroup;
 			children = (
+				823CF17F2D0A1F3F005AD74A /* View */,
+				823CF1812D0A1F53005AD74A /* ViewModel */,
+				823CF1802D0A1F49005AD74A /* Model */,
 			);
 			path = RegistrationModule;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				823CF14A2D0A0866005AD74A /* AuthView.swift */,
+				823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +154,28 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		823CF17F2D0A1F3F005AD74A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				823CF1822D0A1F5F005AD74A /* RegistView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		823CF1802D0A1F49005AD74A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		823CF1812D0A1F53005AD74A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823CF1832D0A1F67005AD74A /* RegistView.swift in Sources */,
+				823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */,
 				823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */,
 				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
 				823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */,

@@ -10,7 +10,7 @@ import SwiftUI
 struct FieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .textFieldStyle(.roundedBorder)
+            .padding()
             .font(
                 .system(size: Constants.fieldFontSize)
             )
@@ -24,7 +24,7 @@ struct FieldModifier: ViewModifier {
 extension FieldModifier {
     private enum Constants {
         static let fieldStrokeColor: Color  = .init(red: 0.7, green: 0.7, blue: 0.7)
-        static let fieldFontSize: CGFloat   = 20
+        static let fieldFontSize: CGFloat   = 18
         static let cornerRadius: CGFloat    = 6
     }
 }
