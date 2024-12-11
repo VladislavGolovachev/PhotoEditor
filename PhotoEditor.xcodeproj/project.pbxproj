@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		823CF1462D0A0698005AD74A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1452D0A0698005AD74A /* .gitignore */; };
+		823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF14A2D0A0866005AD74A /* AuthView.swift */; };
+		823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */; };
+		823CF14F2D0A0866005AD74A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1472D0A0866005AD74A /* Preview Assets.xcassets */; };
+		823CF1502D0A0866005AD74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1492D0A0866005AD74A /* Assets.xcassets */; };
+		823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1782D0A1814005AD74A /* FieldModifier.swift */; };
+		823CF17B2D0A18BA005AD74A /* CommonButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		823CF1342D0A062A005AD74A /* PhotoEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823CF1452D0A0698005AD74A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		823CF1472D0A0866005AD74A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		823CF1492D0A0866005AD74A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		823CF14A2D0A0866005AD74A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorApp.swift; sourceTree = "<group>"; };
+		823CF1782D0A1814005AD74A /* FieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldModifier.swift; sourceTree = "<group>"; };
+		823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		823CF1362D0A062A005AD74A /* PhotoEditor */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhotoEditor;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		823CF1312D0A062A005AD74A /* Frameworks */ = {
@@ -38,7 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				823CF1452D0A0698005AD74A /* .gitignore */,
-				823CF1362D0A062A005AD74A /* PhotoEditor */,
+				823CF14C2D0A0866005AD74A /* PhotoEditor */,
 				823CF1352D0A062A005AD74A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +53,99 @@
 				823CF1342D0A062A005AD74A /* PhotoEditor.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		823CF1482D0A0866005AD74A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				823CF1472D0A0866005AD74A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		823CF14C2D0A0866005AD74A /* PhotoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				823CF1482D0A0866005AD74A /* Preview Content */,
+				823CF1492D0A0866005AD74A /* Assets.xcassets */,
+				823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */,
+				823CF1512D0A08E4005AD74A /* Modules */,
+				823CF1772D0A17F6005AD74A /* Modifiers */,
+			);
+			path = PhotoEditor;
+			sourceTree = "<group>";
+		};
+		823CF1512D0A08E4005AD74A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				823CF1522D0A08EA005AD74A /* AuthModule */,
+				823CF1532D0A08F5005AD74A /* RegistrationModule */,
+				823CF1552D0A09D7005AD74A /* PasswordRecoveryModule */,
+				823CF1542D0A0900005AD74A /* PhotoEditModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		823CF1522D0A08EA005AD74A /* AuthModule */ = {
+			isa = PBXGroup;
+			children = (
+				823CF17C2D0A1A68005AD74A /* View */,
+				823CF17D2D0A1A6D005AD74A /* ViewModel */,
+				823CF17E2D0A1A71005AD74A /* Model */,
+			);
+			path = AuthModule;
+			sourceTree = "<group>";
+		};
+		823CF1532D0A08F5005AD74A /* RegistrationModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegistrationModule;
+			sourceTree = "<group>";
+		};
+		823CF1542D0A0900005AD74A /* PhotoEditModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoEditModule;
+			sourceTree = "<group>";
+		};
+		823CF1552D0A09D7005AD74A /* PasswordRecoveryModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PasswordRecoveryModule;
+			sourceTree = "<group>";
+		};
+		823CF1772D0A17F6005AD74A /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				823CF1782D0A1814005AD74A /* FieldModifier.swift */,
+				823CF17A2D0A18AF005AD74A /* CommonButtonModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		823CF17C2D0A1A68005AD74A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				823CF14A2D0A0866005AD74A /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		823CF17D2D0A1A6D005AD74A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		823CF17E2D0A1A71005AD74A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,9 +162,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				823CF1362D0A062A005AD74A /* PhotoEditor */,
 			);
 			name = PhotoEditor;
 			packageProductDependencies = (
@@ -115,6 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823CF14F2D0A0866005AD74A /* Preview Assets.xcassets in Resources */,
+				823CF1502D0A0866005AD74A /* Assets.xcassets in Resources */,
 				823CF1462D0A0698005AD74A /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */,
+				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
+				823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */,
+				823CF17B2D0A18BA005AD74A /* CommonButtonModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
