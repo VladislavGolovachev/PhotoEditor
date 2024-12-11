@@ -17,6 +17,7 @@
 		823CF1832D0A1F67005AD74A /* RegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1822D0A1F5F005AD74A /* RegistView.swift */; };
 		823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */; };
 		823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */; };
+		823CF1A82D0A4A0F005AD74A /* PasswordRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1A72D0A49F8005AD74A /* PasswordRecoveryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		823CF1822D0A1F5F005AD74A /* RegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistView.swift; sourceTree = "<group>"; };
 		823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogo.swift; sourceTree = "<group>"; };
 		823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		823CF1A72D0A49F8005AD74A /* PasswordRecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		823CF1552D0A09D7005AD74A /* PasswordRecoveryModule */ = {
 			isa = PBXGroup;
 			children = (
+				823CF1A72D0A49F8005AD74A /* PasswordRecoveryView.swift */,
 			);
 			path = PasswordRecoveryModule;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				823CF1832D0A1F67005AD74A /* RegistView.swift in Sources */,
 				823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */,
+				823CF1A82D0A4A0F005AD74A /* PasswordRecoveryView.swift in Sources */,
 				823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */,
 				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
 				823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */,

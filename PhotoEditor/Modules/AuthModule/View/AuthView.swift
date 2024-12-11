@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State var loginString = String()
+    @State var emailString = String()
     @State var passwordString = String()
     
     var body: some View {
@@ -16,7 +16,7 @@ struct AuthView: View {
             Label(Constants.Text.title, image: "")
                 .font(.largeTitle)
             
-            TextField(Constants.Text.loginPlaceholder, text: $loginString)
+            TextField(Constants.Text.loginPlaceholder, text: $emailString)
                 .modifier(FieldModifier())
             
             SecureField(Constants.Text.passwordPlaceholder, text: $passwordString)
@@ -24,7 +24,6 @@ struct AuthView: View {
             
             HStack {
                 Button(Constants.Text.signUpButton) {
-                    RegistView()
                 }
                 .font(.callout)
                 
