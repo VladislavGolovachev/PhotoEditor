@@ -10,63 +10,79 @@ import SwiftUI
 struct AuthView: View {
     @State var emailString = String()
     @State var passwordString = String()
+    @State private var clickedButtonType: ButtonType?
+    @State private var isRecoveryScreenPresented = false
     
     var body: some View {
-        VStack(spacing: GlobalConstants.verticalSpacing) {
-            Label(Constants.Text.title, image: "")
-                .font(.largeTitle)
-            
-            TextField(Constants.Text.loginPlaceholder, text: $emailString)
-                .modifier(FieldModifier())
-            
-            SecureField(Constants.Text.passwordPlaceholder, text: $passwordString)
-                .modifier(FieldModifier())
-            
-            HStack {
-                Button(Constants.Text.signUpButton) {
-                }
-                .font(.callout)
+        NavigationStack {
+            VStack(spacing: GlobalConstants.verticalSpacing) {
+                TextField(TextConstants.loginPlaceholder, text: $emailString)
+                    .modifier(FieldModifier())
                 
-                Spacer()
+                SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
+                    .modifier(FieldModifier())
                 
-                Button((Constants.Text.helpButton)) {
-                    print("Forgot email")
+                HStack {
+                    Button(TextConstants.signUpButton) {
+                        clickedButtonType = .signUp
+                    }
+                    .font(.callout)
+                    
+                    Spacer()
+                    
+                    Button((TextConstants.forgotEmail)) {
+                        isRecoveryScreenPresented.toggle()
+                    }
+                    .font(.callout)
+                    .sheet(isPresented: $isRecoveryScreenPresented) {
+                        RecoveryView()
+                    }
                 }
-                .font(.callout)
+                
+                Button(TextConstants.signInButton) {
+                    clickedButtonType = .signIn
+                }
+                .modifier(CommonButtonModifier(color: .blue))
+                
+                Label(TextConstants.supportingLabel, image: "")
+                    .font(.system(size: GlobalConstants.commonTextSize))
+                    .opacity(0.5)
+                
+                Button {
+                    clickedButtonType = .google
+                } label: {
+                    GoogleLogo()
+                }
             }
+            .navigationTitle(TextConstants.title)
+            .navigationDestination(item: $clickedButtonType, destination: { value in
+                switch value {
+                case .signIn:
+                    Text("Photo Editing Screen")
+                    
+                case .signUp:
+                    SignUpView()
+                    
+                case .google:
+                    Text("Google Screen")
+                }
+            })
+            .padding()
             
-            Button(Constants.Text.signInButton) {
-                print("Sign in")
-            }
-            .modifier(CommonButtonModifier(color: .blue))
-            
-            Label(Constants.Text.supportingLabel, image: "")
-                .font(.system(size: GlobalConstants.commonTextSize))
-                .opacity(0.5)
-            
-            Button {
-                print("Google")
-            } label: {
-                GoogleLogo()
-            }
+            Spacer()
         }
-        .padding()
-        
-        Spacer()
     }
 }
 
 extension AuthView {
-    private enum Constants {
-        enum Text {
-            static let title                = "Sign in"
-            static let loginPlaceholder     = "Email"
-            static let passwordPlaceholder  = "Password"
-            static let signUpButton         = "Sign up"
-            static let helpButton           = "Forgot email?"
-            static let signInButton         = "Sign in"
-            static let supportingLabel      = "Or continue with"
-        }
+    private enum TextConstants {
+        static let title                    = "Sign in"
+        static let loginPlaceholder         = "Email"
+        static let passwordPlaceholder      = "Password"
+        static let signUpButton             = "Sign up"
+        static let forgotEmail              = "Forgot email?"
+        static let signInButton             = "Sign in"
+        static let supportingLabel          = "Or continue with"
     }
 }
 

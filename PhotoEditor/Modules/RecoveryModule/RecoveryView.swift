@@ -1,5 +1,5 @@
 //
-//  PasswordRecoveryView.swift
+//  RecoveryView.swift
 //  PhotoEditor
 //
 //  Created by Владислав Головачев on 12.12.2024.
@@ -7,36 +7,36 @@
 
 import SwiftUI
 
-struct PasswordRecoveryView: View {
+struct RecoveryView: View {
     @State var emailString = String()
     @State var isPresentedAlert = false
     
     var body: some View {
         VStack(spacing: GlobalConstants.verticalSpacing) {
-            Label(Constants.title, image: "")
+            Label(TextConstants.title, image: "")
                 .font(.largeTitle)
             
             HStack() {
-                Label(Constants.description, image: "")
+                Label(TextConstants.description, image: "")
                     .font(.title3)
                 
                 Spacer()
             }
             
-            TextField(Constants.emailPlaceholder, text: $emailString)
+            TextField(TextConstants.emailPlaceholder, text: $emailString)
                 .modifier(FieldModifier())
             
-            Button(Constants.nextButton) {
+            Button(TextConstants.nextButton) {
                 isPresentedAlert = true
             }
             .modifier(CommonButtonModifier(color: .blue))
-            .alert(Constants.Alert.title, isPresented: $isPresentedAlert, actions: {
-                Button(Constants.Alert.buttonText,
+            .alert(TextConstants.Alert.title, isPresented: $isPresentedAlert, actions: {
+                Button(TextConstants.Alert.button,
                        role: .cancel) {
                     //FIXME: Dismiss the current view
                 }
             }, message: {
-                Text(Constants.Alert.message)
+                Text(TextConstants.Alert.message)
             })
         }
         .padding()
@@ -45,8 +45,8 @@ struct PasswordRecoveryView: View {
     }
 }
 
-extension PasswordRecoveryView {
-    private enum Constants {
+extension RecoveryView {
+    private enum TextConstants {
         static let title            = "Account's recovery"
         static let description      = "Enter your email"
         static let emailPlaceholder = "Email"
@@ -54,7 +54,7 @@ extension PasswordRecoveryView {
         
         enum Alert {
             static let title        = "Success!"
-            static let buttonText   = "Okay"
+            static let button   = "Okay"
             static let message      =
         """
         The message was sent to your email. 
@@ -65,5 +65,5 @@ extension PasswordRecoveryView {
 }
 
 #Preview {
-    PasswordRecoveryView()
+    RecoveryView()
 }
