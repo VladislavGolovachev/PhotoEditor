@@ -13,6 +13,8 @@ struct SignUpView: View {
     
     var body: some View {
         VStack(spacing: GlobalConstants.verticalSpacing) {
+            TitleView(text: TextConstants.title)
+            
             TextField(TextConstants.loginPlaceholder, text: $emailString)
                 .modifier(FieldModifier())
             
@@ -27,7 +29,6 @@ struct SignUpView: View {
             }
             .modifier(CommonButtonModifier(color: .green))
         }
-        .navigationTitle(TextConstants.title)
         .padding()
         
         Spacer()

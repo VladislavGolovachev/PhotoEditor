@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct RecoveryView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State var emailString = String()
     @State var isPresentedAlert = false
     
     var body: some View {
         VStack(spacing: GlobalConstants.verticalSpacing) {
-            HStack {
-                Text(TextConstants.title)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                Spacer()
-            }
+            TitleView(text: TextConstants.title)
             
             HStack() {
                 Text(TextConstants.description)
@@ -36,7 +33,7 @@ struct RecoveryView: View {
             .alert(TextConstants.Alert.title, isPresented: $isPresentedAlert, actions: {
                 Button(TextConstants.Alert.button,
                        role: .cancel) {
-                    //FIXME: Dismiss the current view
+                    dismiss()
                 }
             }, message: {
                 Text(TextConstants.Alert.message)

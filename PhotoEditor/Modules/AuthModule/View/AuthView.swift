@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AuthView.swift
 //  PhotoEditor
 //
 //  Created by Владислав Головачев on 11.12.2024.
@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State var emailString = String()
-    @State var passwordString = String()
-    @State private var clickedButtonType: ButtonType?
+    @State private var emailString = String()
+    @State private var passwordString = String()
     @State private var isRecoveryScreenPresented = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack(spacing: GlobalConstants.verticalSpacing) {
+                TitleView(text: TextConstants.title)
+                
                 TextField(TextConstants.loginPlaceholder, text: $emailString)
                     .modifier(FieldModifier())
                 
@@ -23,10 +24,12 @@ struct AuthView: View {
                     .modifier(FieldModifier())
                 
                 HStack {
-                    Button(TextConstants.signUpButton) {
-                        clickedButtonType = .signUp
+                    NavigationLink {
+                        SignUpView()
+                    } label: {
+                        Text(TextConstants.signUpButton)
+                            .font(.callout)
                     }
-                    .font(.callout)
                     
                     Spacer()
                     
@@ -39,34 +42,23 @@ struct AuthView: View {
                     }
                 }
                 
-                Button(TextConstants.signInButton) {
-                    clickedButtonType = .signIn
+                NavigationLink {
+                    EditingView()
+                } label: {
+                    Text(TextConstants.signUpButton)
                 }
                 .modifier(CommonButtonModifier(color: .blue))
                 
                 Text(TextConstants.supportingText)
                     .font(.system(size: GlobalConstants.commonTextSize))
-                    .opacity(0.5)
+                    .opacity(0.4)
                 
-                Button {
-                    clickedButtonType = .google
+                NavigationLink {
+                    Text("Google")
                 } label: {
                     GoogleLogo()
                 }
             }
-            .navigationTitle(TextConstants.title)
-            .navigationDestination(item: $clickedButtonType, destination: { value in
-                switch value {
-                case .signIn:
-                    Text("Photo Editing Screen")
-                    
-                case .signUp:
-                    SignUpView()
-                    
-                case .google:
-                    Text("Google Screen")
-                }
-            })
             .padding()
             
             Spacer()
