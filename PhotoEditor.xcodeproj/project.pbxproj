@@ -20,6 +20,9 @@
 		823CF1A82D0A4A0F005AD74A /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1A72D0A49F8005AD74A /* RecoveryView.swift */; };
 		823CF1D32D0A6BEE005AD74A /* EditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1D22D0A6BE0005AD74A /* EditingView.swift */; };
 		82FA16C22D0B1763003A676F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C12D0B175F003A676F /* TitleView.swift */; };
+		82FA16C42D0B1CD5003A676F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C32D0B1CCC003A676F /* ImagePicker.swift */; };
+		82FA16C62D0B49AE003A676F /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C52D0B49A3003A676F /* Picker.swift */; };
+		82FA16CB2D0B6DA4003A676F /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16CA2D0B6D9C003A676F /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		823CF1A72D0A49F8005AD74A /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
 		823CF1D22D0A6BE0005AD74A /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
 		82FA16C12D0B175F003A676F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		82FA16C32D0B1CCC003A676F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		82FA16C52D0B49A3003A676F /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		82FA16C92D0B5F9D003A676F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		82FA16CA2D0B6D9C003A676F /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +85,7 @@
 		823CF14C2D0A0866005AD74A /* PhotoEditor */ = {
 			isa = PBXGroup;
 			children = (
+				82FA16C92D0B5F9D003A676F /* Info.plist */,
 				823CF1482D0A0866005AD74A /* Preview Content */,
 				823CF1492D0A0866005AD74A /* Assets.xcassets */,
 				823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */,
@@ -195,6 +203,7 @@
 		823CF1CF2D0A6BC9005AD74A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				82FA16C52D0B49A3003A676F /* Picker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				823CF1D22D0A6BE0005AD74A /* EditingView.swift */,
+				82FA16C32D0B1CCC003A676F /* ImagePicker.swift */,
+				82FA16CA2D0B6D9C003A676F /* ActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,12 +300,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				82FA16C22D0B1763003A676F /* TitleView.swift in Sources */,
+				82FA16C62D0B49AE003A676F /* Picker.swift in Sources */,
+				82FA16CB2D0B6DA4003A676F /* ActivityView.swift in Sources */,
 				823CF1832D0A1F67005AD74A /* SignUpView.swift in Sources */,
 				823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */,
 				823CF1A82D0A4A0F005AD74A /* RecoveryView.swift in Sources */,
 				823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */,
 				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
 				823CF1D32D0A6BEE005AD74A /* EditingView.swift in Sources */,
+				82FA16C42D0B1CD5003A676F /* ImagePicker.swift in Sources */,
 				823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */,
 				823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */,
 				823CF17B2D0A18BA005AD74A /* CommonButtonModifier.swift in Sources */,
@@ -434,6 +448,8 @@
 				DEVELOPMENT_TEAM = BMJF63URC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoEditor/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs permission to use camera to take a photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -453,7 +469,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,6 +484,8 @@
 				DEVELOPMENT_TEAM = BMJF63URC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoEditor/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs permission to use camera to take a photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -487,7 +505,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

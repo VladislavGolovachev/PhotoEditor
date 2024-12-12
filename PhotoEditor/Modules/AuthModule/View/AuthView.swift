@@ -14,54 +14,56 @@ struct AuthView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: GlobalConstants.verticalSpacing) {
-                TitleView(text: TextConstants.title)
-                
-                TextField(TextConstants.loginPlaceholder, text: $emailString)
-                    .modifier(FieldModifier())
-                
-                SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
-                    .modifier(FieldModifier())
-                
-                HStack {
+            ScrollView([]) {
+                VStack(spacing: GlobalConstants.verticalSpacing) {
+                    TitleView(text: TextConstants.title)
+                    
+                    TextField(TextConstants.loginPlaceholder, text: $emailString)
+                        .modifier(FieldModifier())
+                    
+                    SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
+                        .modifier(FieldModifier())
+                    
+                    HStack {
+                        NavigationLink {
+                            SignUpView()
+                        } label: {
+                            Text(TextConstants.signUpButton)
+                                .font(.callout)
+                        }
+                        
+                        Spacer()
+                        
+                        Button((TextConstants.forgotEmail)) {
+                            isRecoveryScreenPresented.toggle()
+                        }
+                        .font(.callout)
+                        .sheet(isPresented: $isRecoveryScreenPresented) {
+                            RecoveryView()
+                        }
+                    }
+                    
                     NavigationLink {
-                        SignUpView()
+                        EditingView()
                     } label: {
                         Text(TextConstants.signUpButton)
-                            .font(.callout)
                     }
+                    .modifier(CommonButtonModifier(color: .blue))
                     
-                    Spacer()
+                    Text(TextConstants.supportingText)
+                        .font(.system(size: GlobalConstants.commonTextSize))
+                        .opacity(0.4)
                     
-                    Button((TextConstants.forgotEmail)) {
-                        isRecoveryScreenPresented.toggle()
-                    }
-                    .font(.callout)
-                    .sheet(isPresented: $isRecoveryScreenPresented) {
-                        RecoveryView()
+                    NavigationLink {
+                        Text("Google")
+                    } label: {
+                        GoogleLogo()
                     }
                 }
+                .padding()
                 
-                NavigationLink {
-                    EditingView()
-                } label: {
-                    Text(TextConstants.signUpButton)
-                }
-                .modifier(CommonButtonModifier(color: .blue))
-                
-                Text(TextConstants.supportingText)
-                    .font(.system(size: GlobalConstants.commonTextSize))
-                    .opacity(0.4)
-                
-                NavigationLink {
-                    Text("Google")
-                } label: {
-                    GoogleLogo()
-                }
+                Spacer()
             }
-            .padding()
-            
-            Spacer()
         }
     }
 }

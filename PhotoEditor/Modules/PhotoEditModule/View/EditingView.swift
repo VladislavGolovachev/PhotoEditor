@@ -11,44 +11,100 @@ import PencilKit
 import PhotosUI
 
 struct EditingView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     
-//    @State private var pickerItem: PhotosPickerItem?
-    @State private var selectedImage: Image?
+    @State private var pickerItem: ImagePicker?
+    @State private var selectedImage: UIImage?
+    @State private var source: Picker.Source?
+    @State private var showPicker = false
+    @State private var showDialog = false
     
     var body: some View {
-        Group {
-            if let selectedImage {
-                selectedImage
-                .resizable()
-                .scaledToFit()
-            } else {
-                Text("Before start working, you need to add a photo")
-                    .font(.title)
-                    .opacity(0.6)
-                    .padding()
-            }
-        }
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    Text("Sign out")
+        NavigationView {
+            Group {
+                if let selectedImage {
+                    Image(uiImage: selectedImage)
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    Text("Add a photo, before start working")
+                        .font(.system(size: GlobalConstants.commonTextSize))
+                        .opacity(0.4)
                 }
             }
-//            ToolbarItem(placement: .topBarTrailing) {
-//                PhotosPicker(selection: $pickerItem, matching: .images) {
-//                    Image(systemName: "plus")
-//                }
-//                .onChange(of: pickerItem) {
-//                    Task {
-//                        selectedImage = try await pickerItem?.loadTransferable(type: Image.self)
-//                    }
-//                }
-//            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Sign out")
+                            .font(.system(size: 16))
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showDialog.toggle()
+                    }
+                    label: {
+                        Image(systemName: "photo.badge.plus")
+                            .font(.system(size: 16))
+                    }
+                    .disabled(selectedImage != nil)
+                    .confirmationDialog("Choose a way to add a photo",
+                                        isPresented: $showDialog,
+                                        titleVisibility: .visible) {
+                        Button {
+                            source = .library
+                            showPicker.toggle()
+                        } label: {
+                            Text("Gallery")
+                        }
+                        
+                        Button {
+                            source = .camera
+                        } label: {
+                            Text("Camera")
+                        }
+                    }
+                    .sheet(item: $source) { source in
+                        switch source {
+                        case .library:
+                            ImagePicker(sourceType: .photoLibrary,
+                                        selectedImage: $selectedImage)
+                        case .camera:
+                            ImagePicker(sourceType: .camera,
+                                        selectedImage: $selectedImage)
+                        }
+                    }
+                }
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button {
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                            .font(.system(size: 16))
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
+                            .font(.system(size: 16))
+                    }
+                    
+                    Spacer()
+                    
+                    Button {
+                        selectedImage = nil
+                    } label: {
+                        Image(systemName: "trash")
+                            .font(.system(size: 16))
+                    }
+                }
+            }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
