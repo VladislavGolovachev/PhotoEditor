@@ -13,13 +13,16 @@ struct RecoveryView: View {
     
     var body: some View {
         VStack(spacing: GlobalConstants.verticalSpacing) {
-            Label(TextConstants.title, image: "")
-                .font(.largeTitle)
+            HStack {
+                Text(TextConstants.title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Spacer()
+            }
             
             HStack() {
-                Label(TextConstants.description, image: "")
+                Text(TextConstants.description)
                     .font(.title3)
-                
                 Spacer()
             }
             

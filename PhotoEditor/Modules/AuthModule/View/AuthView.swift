@@ -44,7 +44,7 @@ struct AuthView: View {
                 }
                 .modifier(CommonButtonModifier(color: .blue))
                 
-                Label(TextConstants.supportingLabel, image: "")
+                Text(TextConstants.supportingText)
                     .font(.system(size: GlobalConstants.commonTextSize))
                     .opacity(0.5)
                 
@@ -82,7 +82,7 @@ extension AuthView {
         static let signUpButton             = "Sign up"
         static let forgotEmail              = "Forgot email?"
         static let signInButton             = "Sign in"
-        static let supportingLabel          = "Or continue with"
+        static let supportingText           = "Or continue with"
     }
 }
 
