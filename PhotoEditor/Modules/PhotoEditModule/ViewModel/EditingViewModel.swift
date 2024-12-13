@@ -15,11 +15,11 @@ final class EditingViewModel: ObservableObject {
     
     @Published var selectedImage: UIImage?
     @Published var canvas = PKCanvasView()
-    @Published var source: Picker.Source?
+    @Published var source: PickerType.Source?
     @Published var toolPicker = PKToolPicker()
     
     @Published var textBoxes: [TextBox] = []
-    @Published var addNewBox = false
+    @Published var isNewTextBoxBeingAdded = false
     @Published var currentIndex = 0
     
     func isImageEmpty() -> Bool {
@@ -29,5 +29,19 @@ final class EditingViewModel: ObservableObject {
     func nullifyImage() {
         canvas = PKCanvasView()
         selectedImage = nil
+    }
+    
+    func appendTextBox() {
+        textBoxes.append(TextBox())
+        currentIndex = textBoxes.count - 1
+    }
+    
+    func cancelTextBox() {
+        textBoxes.removeLast()
+        isNewTextBoxBeingAdded = false
+    }
+    
+    func addTextBox() {
+        isNewTextBoxBeingAdded = false
     }
 }

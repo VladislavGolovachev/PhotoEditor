@@ -12,8 +12,10 @@ struct TextBox: Identifiable {
     var id = UUID().uuidString
     
     var text = ""
-    var font: Font = .body
-    var size: CGSize = .zero
-    var textColor: Color = .black
+    var font = "Arial"
+    var size: CGFloat = GlobalConstants.commonTextSize
+    var isBold = false
+    var textColor: Color = .white
+    
     var offset: CGSize = .zero
 }

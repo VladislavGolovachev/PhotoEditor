@@ -13,7 +13,7 @@ struct InitialView: View {
     
     var body: some View {
         Text("Add a photo, before start working")
-            .modifier(SecondaryTextModifier())
+            .secondaryTextStyle()
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Sign out") {

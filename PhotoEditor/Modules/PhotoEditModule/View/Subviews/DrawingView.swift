@@ -17,32 +17,26 @@ struct DrawingView: View {
                 let size = proxy.size
                 return AnyView(CanvasView(size: size))
             }
-            //            if viewModel.addNewBox {
-            //                TextField("Text", text: $viewModel.textBoxes[viewModel.currentIndex].text)
-            //                    .font(.system(size: 24))
-            //                    .colorScheme(.dark)
-            //                    .padding()
-            //            }
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button("Cancel") {
-                    viewModel.mode = .editing
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Cancel") {
+                        viewModel.mode = .editing
+                    }
+                    .barButtonStyle()
                 }
-                .barButtonStyle()
-            }
-            ToolbarItemGroup(placement: .topBarTrailing) {
-                Button {
-                    viewModel.mode = .editing
-                } label: {
-                    Image(systemName: "scribble.variable")
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button {
+                        viewModel.mode = .editing
+                    } label: {
+                        Image(systemName: "scribble.variable")
+                    }
+                    .barButtonStyle()
+                    
+                    Button("**Done**") {
+                        viewModel.mode = .editing
+                    }
+                    .barButtonStyle()
                 }
-                .barButtonStyle()
-                
-                Button("**Done**") {
-                    viewModel.mode = .editing
-                }
-                .barButtonStyle()
             }
         }
     }

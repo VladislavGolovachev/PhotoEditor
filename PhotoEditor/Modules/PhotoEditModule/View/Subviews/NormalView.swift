@@ -50,7 +50,9 @@ struct NormalView: View {
                 }
             }
             .sheet(isPresented: $viewModel.showShare) {
-                ActivityView(activityItems: [viewModel.selectedImage!])
+                if let image = viewModel.selectedImage {
+                    ActivityView(activityItems: [image])
+                }
             }
     }
 }

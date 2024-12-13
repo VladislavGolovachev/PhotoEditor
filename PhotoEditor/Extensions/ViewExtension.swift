@@ -17,12 +17,13 @@ extension View {
         modifier(FieldModifier())
     }
     
-    func commonTextStyle() -> some View {
-        modifier(CommonTextModifier())
+    func commonTextStyle(opacity: CGFloat = 1,
+                         color: Color = .black) -> some View {
+        modifier(TextModifier(opacity: opacity, color: color))
     }
     
     func secondaryTextStyle() -> some View {
-        modifier(SecondaryTextModifier())
+        modifier(TextModifier(opacity: 0.6, color: .gray))
     }
     
     func barButtonStyle(color: Color = .blue) -> some View {
