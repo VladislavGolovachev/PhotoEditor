@@ -19,7 +19,3 @@ struct TitleView: View {
         }
     }
 }
-
-#Preview {
-    TitleView(text: "Sign in")
-}

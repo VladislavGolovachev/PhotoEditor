@@ -2,34 +2,41 @@
 //  MainView.swift
 //  PhotoEditor
 //
-//  Created by Владислав Головачев on 13.12.2024.
+//  Created by Владислав Головачев on 12.12.2024.
 //
 
 import SwiftUI
+import CoreImage
+import PencilKit
+import PhotosUI
 
 struct MainView: View {
-    @EnvironmentObject var viewModel: EditingViewModel
+    @StateObject var viewModel = EditingViewModel()
+    @Environment(\.dismiss) private var dismiss
     
+    @ViewBuilder
     var body: some View {
-        ZStack {
-            if let image = viewModel.selectedImage {
-                if viewModel.mode == .drawing {
-                    DrawingView()
-                } else {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                }
-                if viewModel.addNewBox {
-                    TextField("Text", text: $viewModel.textBoxes[viewModel.currentIndex].text)
-                        .font(.system(size: 24))
-                        .colorScheme(.dark)
-                        .padding()
-                }
+        NavigationView {
+            if viewModel.isImageEmpty() {
+                InitialView()
             } else {
-                Text("Add a photo, before start working")
-                    .modifier(SecondaryTextModifier())
+                switch viewModel.mode {
+                case .normal:
+                    NormalView()
+                    
+                case .editing:
+                    EditingView()
+                    
+                case .drawing:
+                    EditingView()
+                }
             }
         }
+        .environmentObject(viewModel)
+        .navigationBarBackButtonHidden(true)
     }
+}
+
+#Preview {
+    EditingView()
 }

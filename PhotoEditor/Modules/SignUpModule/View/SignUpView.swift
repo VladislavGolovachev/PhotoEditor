@@ -16,18 +16,18 @@ struct SignUpView: View {
             TitleView(text: TextConstants.title)
             
             TextField(TextConstants.loginPlaceholder, text: $emailString)
-                .modifier(FieldModifier())
+                .fieldStyle()
             
             SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
-                .modifier(FieldModifier())
+                .fieldStyle()
             
             SecureField(TextConstants.confirmPasswordPlaceholder, text: $passwordString)
-                .modifier(FieldModifier())
+                .fieldStyle()
             
             Button(TextConstants.signUpButton) {
                 print("Sign up")
             }
-            .modifier(CommonButtonModifier(color: .green))
+            .capsuleButtonStyle(color: .green)
         }
         .padding()
         

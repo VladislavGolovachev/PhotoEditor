@@ -1,5 +1,5 @@
 //
-//  CommonButtonModifier.swift
+//  CapsuleButtonModifier.swift
 //  PhotoEditor
 //
 //  Created by Владислав Головачев on 12.12.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonButtonModifier: ViewModifier {
+struct CapsuleButtonModifier: ViewModifier {
     let color: Color
     
     func body(content: Content) -> some View {
@@ -22,7 +22,7 @@ struct CommonButtonModifier: ViewModifier {
     }
 }
 
-extension CommonButtonModifier {
+extension CapsuleButtonModifier {
     private enum Constants {
         static let width: CGFloat = 170
     }

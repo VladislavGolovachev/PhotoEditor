@@ -29,10 +29,9 @@ struct RecoveryView: View {
             Button(TextConstants.nextButton) {
                 isPresentedAlert = true
             }
-            .modifier(CommonButtonModifier(color: .blue))
+            .capsuleButtonStyle(color: .blue)
             .alert(TextConstants.Alert.title, isPresented: $isPresentedAlert, actions: {
-                Button(TextConstants.Alert.button,
-                       role: .cancel) {
+                Button(TextConstants.Alert.button, role: .cancel) {
                     dismiss()
                 }
             }, message: {

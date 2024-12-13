@@ -19,10 +19,10 @@ struct AuthView: View {
                     TitleView(text: TextConstants.title)
                     
                     TextField(TextConstants.loginPlaceholder, text: $emailString)
-                        .modifier(FieldModifier())
+                        .fieldStyle()
                     
                     SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
-                        .modifier(FieldModifier())
+                        .fieldStyle()
                     
                     HStack {
                         NavigationLink {
@@ -34,7 +34,7 @@ struct AuthView: View {
                         
                         Spacer()
                         
-                        Button((TextConstants.forgotEmail)) {
+                        Button(TextConstants.forgotEmail) {
                             isRecoveryScreenPresented.toggle()
                         }
                         .font(.callout)
@@ -44,14 +44,14 @@ struct AuthView: View {
                     }
                     
                     NavigationLink {
-                        EditingView()
+                        MainView()
                     } label: {
                         Text(TextConstants.signUpButton)
                     }
-                    .modifier(CommonButtonModifier(color: .blue))
+                    .capsuleButtonStyle(color: .blue)
                     
                     Text(TextConstants.supportingText)
-                        .modifier(SecondaryTextModifier())
+                        .secondaryTextStyle()
                     
                     NavigationLink {
                         Text("Google")
