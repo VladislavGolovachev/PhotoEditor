@@ -28,7 +28,7 @@ struct MainView: View {
                     EditingView()
                     
                 case .drawing:
-                    EditingView()
+                    DrawingView()
                 }
             }
         }

@@ -17,12 +17,12 @@ struct DrawingView: View {
                 let size = proxy.size
                 return AnyView(CanvasView(size: size))
             }
-//            if viewModel.addNewBox {
-//                TextField("Text", text: $viewModel.textBoxes[viewModel.currentIndex].text)
-//                    .font(.system(size: 24))
-//                    .colorScheme(.dark)
-//                    .padding()
-//            }
+            //            if viewModel.addNewBox {
+            //                TextField("Text", text: $viewModel.textBoxes[viewModel.currentIndex].text)
+            //                    .font(.system(size: 24))
+            //                    .colorScheme(.dark)
+            //                    .padding()
+            //            }
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -39,7 +39,7 @@ struct DrawingView: View {
                 }
                 .barButtonStyle()
                 
-                Button("Done") {
+                Button("**Done**") {
                     viewModel.mode = .editing
                 }
                 .barButtonStyle()

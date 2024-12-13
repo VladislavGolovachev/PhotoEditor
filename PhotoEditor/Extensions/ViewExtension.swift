@@ -25,7 +25,7 @@ extension View {
         modifier(SecondaryTextModifier())
     }
     
-    func barButtonStyle() -> some View {
-        modifier(BarButtonModifier())
+    func barButtonStyle(color: Color = .blue) -> some View {
+        modifier(BarButtonModifier(color: color))
     }
 }

@@ -16,10 +16,10 @@ struct EditingView: View {
             .scaledToFit()
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel") {
+                    Button("Revert") {
                         viewModel.mode = .normal
                     }
-                    .barButtonStyle()
+                    .barButtonStyle(color: .red)
                 }
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button {
@@ -27,12 +27,12 @@ struct EditingView: View {
                     } label: {
                         Image(systemName: "scribble.variable")
                     }
-                    .barButtonStyle()
+                    .barButtonStyle(color: .gray)
                     
                     Button("Save") {
                         viewModel.mode = .normal
                     }
-                    .barButtonStyle()
+                    .barButtonStyle(color: .yellow)
                 }
                 ToolbarItemGroup(placement: .bottomBar) {
                     Spacer()
@@ -42,14 +42,14 @@ struct EditingView: View {
                         } label: {
                             Image(systemName: "crop.rotate")
                         }
-                        .barButtonStyle()
+                        .barButtonStyle(color: .gray)
                         
                         Button {
                             
                         } label: {
                             Image(systemName: "camera.filters")
                         }
-                        .barButtonStyle()
+                        .barButtonStyle(color: .gray)
                         
                         Button {
                             viewModel.textBoxes.append(TextBox())
@@ -60,7 +60,7 @@ struct EditingView: View {
                         } label: {
                             Image(systemName: "character.textbox")
                         }
-                        .barButtonStyle()
+                        .barButtonStyle(color: .gray)
                     }
                     Spacer()
                 }

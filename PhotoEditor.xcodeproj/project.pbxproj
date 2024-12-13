@@ -212,9 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				823CF17A2D0A18AF005AD74A /* CapsuleButtonModifier.swift */,
-				821ACE302D0C45DB00D0924A /* SecondaryTextModifier.swift */,
-				821ACE432D0CAFE300D0924A /* CommonTextModifier.swift */,
 				821ACE452D0CAFF400D0924A /* BarButtonModifier.swift */,
+				821ACE432D0CAFE300D0924A /* CommonTextModifier.swift */,
+				821ACE302D0C45DB00D0924A /* SecondaryTextModifier.swift */,
 				823CF1782D0A1814005AD74A /* FieldModifier.swift */,
 			);
 			path = Modifiers;
