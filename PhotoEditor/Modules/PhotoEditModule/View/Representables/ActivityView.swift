@@ -14,7 +14,8 @@ struct ActivityView: UIViewControllerRepresentable {
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityView>)
     -> UIActivityViewController {
-        return UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
+        return UIActivityViewController(activityItems: activityItems,
+                                        applicationActivities: applicationActivities)
     }
     
     func updateUIViewController(_ uiViewController: UIActivityViewController,

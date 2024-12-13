@@ -51,8 +51,7 @@ struct AuthView: View {
                     .modifier(CommonButtonModifier(color: .blue))
                     
                     Text(TextConstants.supportingText)
-                        .font(.system(size: GlobalConstants.commonTextSize))
-                        .opacity(0.4)
+                        .modifier(SecondaryTextModifier())
                     
                     NavigationLink {
                         Text("Google")

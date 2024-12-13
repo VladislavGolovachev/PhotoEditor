@@ -11,100 +11,102 @@ import PencilKit
 import PhotosUI
 
 struct EditingView: View {
+    @StateObject var viewModel = EditingViewModel()
     @Environment(\.dismiss) private var dismiss
     
-    @State private var pickerItem: ImagePicker?
-    @State private var selectedImage: UIImage?
-    @State private var source: Picker.Source?
-    @State private var showPicker = false
-    @State private var showDialog = false
-    
     var body: some View {
-        NavigationView {
-            Group {
-                if let selectedImage {
-                    Image(uiImage: selectedImage)
-                        .resizable()
-                        .scaledToFit()
-                } else {
-                    Text("Add a photo, before start working")
-                        .font(.system(size: GlobalConstants.commonTextSize))
-                        .opacity(0.4)
-                }
+        ZStack {
+            NavigationView {
+                MainView()
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                dismiss()
+                            } label: {
+                                Text("Sign out")
+                                    .font(.system(size: GlobalConstants.barButtonSize))
+                            }
+                        }
+                        ToolbarItemGroup(placement: .topBarTrailing) {
+                            Group {
+                                if viewModel.mode != .normal {
+                                    Button {
+                                        if viewModel.mode == .editing {
+                                            viewModel.mode = .drawing
+                                        } else {
+                                            viewModel.mode = .editing
+                                        }
+                                    } label: {
+                                        Image(systemName: "scribble.variable")
+                                            .font(.system(size: GlobalConstants.barButtonSize))
+                                    }
+                                }
+                            }
+                            TopRightButton()
+                        }
+                        ToolbarItemGroup(placement: .bottomBar) {
+                            switch viewModel.mode {
+                            case .editing:
+                                Spacer()
+                                HStack(spacing: 40) {
+                                    Button {
+                                        
+                                    } label: {
+                                        Image(systemName: "crop.rotate")
+                                            .font(.system(size: GlobalConstants.barButtonSize))
+                                    }
+                                    
+                                    Button {
+                                        
+                                    } label: {
+                                        Image(systemName: "camera.filters")
+                                            .font(.system(size: GlobalConstants.barButtonSize))
+                                    }
+                                    
+                                    Button {
+                                        viewModel.textBoxes.append(TextBox())
+                                        
+                                        withAnimation {
+                                            viewModel.addNewBox.toggle()
+                                        }
+                                    } label: {
+                                        Image(systemName: "character.textbox")
+                                            .font(.system(size: GlobalConstants.barButtonSize))
+                                    }
+                                }
+                                Spacer()
+                                
+                            case .drawing:
+                                EmptyView()
+                                
+                            case .normal:
+                                if !viewModel.isImageEmpty() {
+                                    Button {
+                                        viewModel.showShare.toggle()
+                                    } label: {
+                                        Image(systemName: "square.and.arrow.up")
+                                            .font(.system(size: GlobalConstants.barButtonSize))
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    Button {
+                                        viewModel.nullifyImage()
+                                    } label: {
+                                        Image(systemName: "trash")
+                                            .font(.system(size: GlobalConstants.barButtonSize))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $viewModel.showShare) {
+                        ActivityView(activityItems: [viewModel.selectedImage!])
+                    }
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("Sign out")
-                            .font(.system(size: 16))
-                    }
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showDialog.toggle()
-                    }
-                    label: {
-                        Image(systemName: "photo.badge.plus")
-                            .font(.system(size: 16))
-                    }
-                    .disabled(selectedImage != nil)
-                    .confirmationDialog("Choose a way to add a photo",
-                                        isPresented: $showDialog,
-                                        titleVisibility: .visible) {
-                        Button {
-                            source = .library
-                            showPicker.toggle()
-                        } label: {
-                            Text("Gallery")
-                        }
-                        
-                        Button {
-                            source = .camera
-                        } label: {
-                            Text("Camera")
-                        }
-                    }
-                    .sheet(item: $source) { source in
-                        switch source {
-                        case .library:
-                            ImagePicker(sourceType: .photoLibrary,
-                                        selectedImage: $selectedImage)
-                        case .camera:
-                            ImagePicker(sourceType: .camera,
-                                        selectedImage: $selectedImage)
-                        }
-                    }
-                }
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Button {
-                    } label: {
-                        Image(systemName: "square.and.arrow.up")
-                            .font(.system(size: 16))
-                    }
-                    
-                    Spacer()
-                    
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "slider.horizontal.3")
-                            .font(.system(size: 16))
-                    }
-                    
-                    Spacer()
-                    
-                    Button {
-                        selectedImage = nil
-                    } label: {
-                        Image(systemName: "trash")
-                            .font(.system(size: 16))
-                    }
-                }
-            }
+            .environmentObject(viewModel)
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 
