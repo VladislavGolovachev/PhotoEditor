@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct PhotoEditorApp: App {
+    @StateObject var model = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            NavigationView {
+                AppViewSwitcher()
+            }
+            .environmentObject(model)
         }
     }
 }

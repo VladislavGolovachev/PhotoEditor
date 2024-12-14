@@ -15,12 +15,6 @@ struct InitialView: View {
         Text("Add a photo, before start working")
             .secondaryTextStyle()
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Sign out") {
-                        dismiss()
-                    }
-                    .barButtonStyle()
-                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         viewModel.showDialog.toggle()

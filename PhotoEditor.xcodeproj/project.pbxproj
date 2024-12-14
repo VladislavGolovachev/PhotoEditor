@@ -33,6 +33,9 @@
 		823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */; };
 		823CF1A82D0A4A0F005AD74A /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1A72D0A49F8005AD74A /* RecoveryView.swift */; };
 		823CF1D32D0A6BEE005AD74A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1D22D0A6BE0005AD74A /* MainView.swift */; };
+		82C1EDDA2D0D372400220604 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1EDD92D0D372000220604 /* ValidationError.swift */; };
+		82C1EDDC2D0D37E500220604 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1EDDB2D0D37E200220604 /* NetworkError.swift */; };
+		82C1EDE02D0D4E5900220604 /* AppViewSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1EDDF2D0D4E4F00220604 /* AppViewSwitcher.swift */; };
 		82FA16C22D0B1763003A676F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C12D0B175F003A676F /* TitleView.swift */; };
 		82FA16C42D0B1CD5003A676F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C32D0B1CCC003A676F /* ImagePicker.swift */; };
 		82FA16C62D0B49AE003A676F /* PickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C52D0B49A3003A676F /* PickerType.swift */; };
@@ -69,6 +72,9 @@
 		823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		823CF1A72D0A49F8005AD74A /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
 		823CF1D22D0A6BE0005AD74A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		82C1EDD92D0D372000220604 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		82C1EDDB2D0D37E200220604 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		82C1EDDF2D0D4E4F00220604 /* AppViewSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewSwitcher.swift; sourceTree = "<group>"; };
 		82FA16C12D0B175F003A676F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		82FA16C32D0B1CCC003A676F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		82FA16C52D0B49A3003A676F /* PickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerType.swift; sourceTree = "<group>"; };
@@ -169,10 +175,12 @@
 				823CF1482D0A0866005AD74A /* Preview Content */,
 				823CF1492D0A0866005AD74A /* Assets.xcassets */,
 				823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */,
+				82C1EDDF2D0D4E4F00220604 /* AppViewSwitcher.swift */,
 				823CF1512D0A08E4005AD74A /* Modules */,
 				821ACE322D0C467200D0924A /* SupportingViews */,
 				821ACE492D0CB30400D0924A /* Extensions */,
 				823CF1772D0A17F6005AD74A /* Modifiers */,
+				82C1EDD82D0D371500220604 /* Errors */,
 				823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */,
 			);
 			path = PhotoEditor;
@@ -313,6 +321,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		82C1EDD82D0D371500220604 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				82C1EDDB2D0D37E200220604 /* NetworkError.swift */,
+				82C1EDD92D0D372000220604 /* ValidationError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,12 +409,14 @@
 				821ACE352D0C4A4100D0924A /* CanvasView.swift in Sources */,
 				82FA16DA2D0B6F61003A676F /* Mode.swift in Sources */,
 				821ACE482D0CB21400D0924A /* ViewExtension.swift in Sources */,
+				82C1EDDC2D0D37E500220604 /* NetworkError.swift in Sources */,
 				82FA16CB2D0B6DA4003A676F /* ActivityView.swift in Sources */,
 				823CF1832D0A1F67005AD74A /* SignUpView.swift in Sources */,
 				821ACE2D2D0C3DA900D0924A /* DrawingView.swift in Sources */,
 				823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */,
 				821ACE462D0CB01300D0924A /* BarButtonModifier.swift in Sources */,
 				821ACE4E2D0CC06300D0924A /* AddingTextView.swift in Sources */,
+				82C1EDDA2D0D372400220604 /* ValidationError.swift in Sources */,
 				821ACE5D2D0D234900D0924A /* TextBoxesView.swift in Sources */,
 				823CF1A82D0A4A0F005AD74A /* RecoveryView.swift in Sources */,
 				821ACE442D0CAFEA00D0924A /* TextModifier.swift in Sources */,
@@ -406,6 +425,7 @@
 				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
 				821ACE3B2D0CA6DB00D0924A /* InitialView.swift in Sources */,
 				821ACE502D0CD8CA00D0924A /* TextToolBar.swift in Sources */,
+				82C1EDE02D0D4E5900220604 /* AppViewSwitcher.swift in Sources */,
 				821ACE2F2D0C40DC00D0924A /* EditingViewModel.swift in Sources */,
 				823CF1D32D0A6BEE005AD74A /* MainView.swift in Sources */,
 				82FA16C42D0B1CD5003A676F /* ImagePicker.swift in Sources */,

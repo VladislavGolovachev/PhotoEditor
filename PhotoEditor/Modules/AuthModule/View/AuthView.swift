@@ -8,63 +8,73 @@
 import SwiftUI
 
 struct AuthView: View {
-    @StateObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
     
+    @ViewBuilder
     var body: some View {
-        NavigationView {
-            ScrollView([]) {
-                VStack(spacing: GlobalConstants.verticalSpacing) {
-                    TitleView(text: TextConstants.title)
-                    
-                    TextField(TextConstants.loginPlaceholder, text: $viewModel.emailString)
-                        .fieldStyle()
-                    
-                    SecureField(TextConstants.passwordPlaceholder, text: $viewModel.passwordString)
-                        .fieldStyle()
-                    
-                    HStack {
-                        NavigationLink {
-                            SignUpView()
-                        } label: {
-                            Text(TextConstants.signUpButton)
-                                .font(.callout)
-                        }
-                        
-                        Spacer()
-                        
-                        Button(TextConstants.forgotEmail) {
-                            viewModel.isRecoveryScreenPresented.toggle()
-                        }
-                        .font(.callout)
-                        .sheet(isPresented: $viewModel.isRecoveryScreenPresented) {
-                            RecoveryView()
-                        }
-                    }
-                    
+        ScrollView([]) {
+            VStack(spacing: GlobalConstants.verticalSpacing) {
+                TitleView(text: TextConstants.title)
+                
+                TextField(TextConstants.loginPlaceholder, text: $viewModel.emailString)
+                    .fieldStyle()
+                    .textContentType(.emailAddress)
+                    .submitLabel(.next)
+                
+                SecureField(TextConstants.passwordPlaceholder, text: $viewModel.passwordString)
+                    .fieldStyle()
+                    .textContentType(.password)
+                    .submitLabel(.done)
+                
+                HStack {
                     NavigationLink {
-                        MainView()
+                        SignUpView()
                     } label: {
                         Text(TextConstants.signUpButton)
+                            .font(.callout)
                     }
-                    .capsuleButtonStyle(color: .blue)
                     
-                    Text(TextConstants.supportingText)
-                        .secondaryTextStyle()
+                    Spacer()
                     
-                    NavigationLink {
-                        Text("Google")
-                    } label: {
-                        GoogleLogo()
+                    Button(TextConstants.forgotEmail) {
+                        viewModel.isRecoveryScreenPresented.toggle()
+                    }
+                    .font(.callout)
+                    .sheet(isPresented: $viewModel.isRecoveryScreenPresented) {
+                        RecoveryView()
                     }
                 }
-                .padding()
                 
-                Spacer()
+                Button(TextConstants.signInButton) {
+                    viewModel.checkInputValidity()
+                }
+                .capsuleButtonStyle(color: .blue)
+                
+                Text(TextConstants.supportingText)
+                    .secondaryTextStyle()
+                
+                NavigationLink {
+                    Text("Google")
+                } label: {
+                    GoogleLogo()
+                }
             }
+            .padding()
+            
+            Spacer()
         }
+        .alert("Error caused",
+               isPresented: $viewModel.errorCaused,
+               actions: {
+            Button("Okay") {}
+                .commonTextStyle()
+        }, message: {
+            Text(viewModel.errorMessage)
+        })
     }
 }
 
+//MARK: Constants
 extension AuthView {
     private enum TextConstants {
         static let title                    = "Sign in"
@@ -75,8 +85,4 @@ extension AuthView {
         static let signInButton             = "Sign in"
         static let supportingText           = "Or continue with"
     }
-}
-
-#Preview {
-    AuthView()
 }
