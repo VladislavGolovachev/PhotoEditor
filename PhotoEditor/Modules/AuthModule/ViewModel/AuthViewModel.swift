@@ -8,5 +8,9 @@
 import SwiftUI
 
 final class AuthViewModel: ObservableObject {
+    @Published var emailString = String()
+    @Published var passwordString = String()
+    @Published var isRecoveryScreenPresented = false
+    
     
 }

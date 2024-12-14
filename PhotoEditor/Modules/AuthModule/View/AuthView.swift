@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State private var emailString = String()
-    @State private var passwordString = String()
-    @State private var isRecoveryScreenPresented = false
+    @StateObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationView {
@@ -18,10 +16,10 @@ struct AuthView: View {
                 VStack(spacing: GlobalConstants.verticalSpacing) {
                     TitleView(text: TextConstants.title)
                     
-                    TextField(TextConstants.loginPlaceholder, text: $emailString)
+                    TextField(TextConstants.loginPlaceholder, text: $viewModel.emailString)
                         .fieldStyle()
                     
-                    SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
+                    SecureField(TextConstants.passwordPlaceholder, text: $viewModel.passwordString)
                         .fieldStyle()
                     
                     HStack {
@@ -35,10 +33,10 @@ struct AuthView: View {
                         Spacer()
                         
                         Button(TextConstants.forgotEmail) {
-                            isRecoveryScreenPresented.toggle()
+                            viewModel.isRecoveryScreenPresented.toggle()
                         }
                         .font(.callout)
-                        .sheet(isPresented: $isRecoveryScreenPresented) {
+                        .sheet(isPresented: $viewModel.isRecoveryScreenPresented) {
                             RecoveryView()
                         }
                     }
