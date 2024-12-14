@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RecoveryView: View {
     @Environment(\.dismiss) var dismiss
-    
-    @State var emailString = String()
-    @State var isPresentedAlert = false
+    @StateObject var viewModel = RecoveryViewModel()
     
     var body: some View {
         VStack(spacing: GlobalConstants.verticalSpacing) {
@@ -23,21 +21,32 @@ struct RecoveryView: View {
                 Spacer()
             }
             
-            TextField(TextConstants.emailPlaceholder, text: $emailString)
+            TextField(TextConstants.emailPlaceholder, text: $viewModel.emailString)
                 .modifier(FieldModifier())
             
             Button(TextConstants.nextButton) {
-                isPresentedAlert = true
+                viewModel.signUp()
             }
             .capsuleButtonStyle(color: .blue)
-            .alert(TextConstants.Alert.title, isPresented: $isPresentedAlert, actions: {
-                Button(TextConstants.Alert.button, role: .cancel) {
-                    dismiss()
-                }
-            }, message: {
-                Text(TextConstants.Alert.message)
-            })
+            
         }
+        .alert(TextConstants.Alert.title,
+               isPresented: $viewModel.messageSentSuccessfuly,
+               actions: {
+            Button(TextConstants.Alert.button, role: .cancel) {
+                dismiss()
+            }
+        }, message: {
+            Text(TextConstants.Alert.message)
+        })
+        .alert("Error caused",
+                 isPresented: $viewModel.errorCaused,
+                 actions: {
+              Button("Okay") {}
+                  .commonTextStyle()
+          }, message: {
+              Text(viewModel.errorMessage)
+          })
         .padding()
         
         Spacer()
