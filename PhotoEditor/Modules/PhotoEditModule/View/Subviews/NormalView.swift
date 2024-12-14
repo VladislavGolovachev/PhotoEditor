@@ -16,12 +16,6 @@ struct NormalView: View {
             .resizable()
             .scaledToFit()
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Sign out") {
-                        dismiss()
-                    }
-                    .barButtonStyle()
-                }
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button {
                         viewModel.mode = .editing

@@ -11,12 +11,12 @@ import PencilKit
 import PhotosUI
 
 struct MainView: View {
-    @StateObject var viewModel = EditingViewModel()
+    @ObservedObject var viewModel = EditingViewModel()
     @Environment(\.dismiss) private var dismiss
     
     @ViewBuilder
     var body: some View {
-        NavigationView {
+        Group{
             if viewModel.isImageEmpty() {
                 InitialView()
             } else {

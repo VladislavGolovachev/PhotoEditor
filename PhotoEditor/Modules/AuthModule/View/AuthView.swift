@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State private var emailString = String()
-    @State private var passwordString = String()
-    @State private var isRecoveryScreenPresented = false
+    @EnvironmentObject var viewModel: AuthViewModel
     
+    @ViewBuilder
     var body: some View {
-        NavigationView {
+        ZStack {
             ScrollView([]) {
                 VStack(spacing: GlobalConstants.verticalSpacing) {
                     TitleView(text: TextConstants.title)
                     
-                    TextField(TextConstants.loginPlaceholder, text: $emailString)
+                    TextField(TextConstants.loginPlaceholder, text: $viewModel.emailString)
                         .fieldStyle()
+                        .textContentType(.emailAddress)
+                        .submitLabel(.next)
                     
-                    SecureField(TextConstants.passwordPlaceholder, text: $passwordString)
+                    SecureField(TextConstants.passwordPlaceholder, text: $viewModel.passwordString)
                         .fieldStyle()
+                        .textContentType(.password)
+                        .submitLabel(.done)
                     
                     HStack {
                         NavigationLink {
@@ -35,26 +38,24 @@ struct AuthView: View {
                         Spacer()
                         
                         Button(TextConstants.forgotEmail) {
-                            isRecoveryScreenPresented.toggle()
+                            viewModel.isRecoveryScreenPresented.toggle()
                         }
                         .font(.callout)
-                        .sheet(isPresented: $isRecoveryScreenPresented) {
+                        .sheet(isPresented: $viewModel.isRecoveryScreenPresented) {
                             RecoveryView()
                         }
                     }
                     
-                    NavigationLink {
-                        MainView()
-                    } label: {
-                        Text(TextConstants.signUpButton)
+                    Button(TextConstants.signInButton) {
+                        viewModel.signIn()
                     }
                     .capsuleButtonStyle(color: .blue)
                     
                     Text(TextConstants.supportingText)
                         .secondaryTextStyle()
                     
-                    NavigationLink {
-                        Text("Google")
+                    Button {
+                        viewModel.signInGoogle()
                     } label: {
                         GoogleLogo()
                     }
@@ -64,21 +65,26 @@ struct AuthView: View {
                 Spacer()
             }
         }
+        .alert("Error caused",
+               isPresented: $viewModel.errorCaused,
+               actions: {
+            Button("Okay") {}
+                .commonTextStyle()
+        }, message: {
+            Text(viewModel.errorMessage)
+        })
     }
 }
 
+//MARK: Constants
 extension AuthView {
     private enum TextConstants {
         static let title                    = "Sign in"
         static let loginPlaceholder         = "Email"
         static let passwordPlaceholder      = "Password"
         static let signUpButton             = "Sign up"
-        static let forgotEmail              = "Forgot email?"
+        static let forgotEmail              = "Forgot password?"
         static let signInButton             = "Sign in"
         static let supportingText           = "Or continue with"
     }
-}
-
-#Preview {
-    AuthView()
 }
