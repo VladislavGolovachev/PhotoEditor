@@ -15,23 +15,18 @@ struct DrawingView: View {
         ZStack {
             GeometryReader { proxy -> AnyView in
                 let size = proxy.size
-                return AnyView(CanvasView(size: size))
-            }
-            ForEach(viewModel.textBoxes) { box in
-                Text(box.text)
-                    .textBoxStyle(textBox: box)
-                    .position(box.location)
-                    .gesture(
-                        DragGesture()
-                            .onChanged { value in
-                                withAnimation {
-                                    viewModel.dragOnChanged(box: box, location: value.location)
-                                }
-                            }
-                            .onEnded({ value in
-                                viewModel.dragOnEnded(box: box, location: value.location)
-                            })
-                    )
+                DispatchQueue.main.async {
+                    if viewModel.imageSize == .zero {
+                        viewModel.imageSize = proxy.size
+                    }
+                }
+                
+                return AnyView(
+                    ZStack {
+                        CanvasView(size: size)
+                        TextBoxesView()
+                    }
+                )
             }
             
             if viewModel.isNewTextBoxBeingAdded {
@@ -63,6 +58,7 @@ struct DrawingView: View {
                 .barButtonStyle()
                 
                 Button("**Done**") {
+                    viewModel.saveDrawing()
                     viewModel.mode = .editing
                 }
                 .barButtonStyle()

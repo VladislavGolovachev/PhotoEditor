@@ -5,7 +5,7 @@
 //  Created by Владислав Головачев on 13.12.2024.
 //
 
-import Foundation
+import SwiftUI
 import PencilKit
 
 final class EditingViewModel: ObservableObject {
@@ -22,7 +22,7 @@ final class EditingViewModel: ObservableObject {
     @Published var isNewTextBoxBeingAdded = false
     @Published var currentIndex = 0
     
-    @Published var imageRect: CGRect = .zero
+    @Published var imageSize: CGSize = .zero
     
     func isImageEmpty() -> Bool {
         return selectedImage == nil
@@ -77,12 +77,29 @@ final class EditingViewModel: ObservableObject {
         canvas.resignFirstResponder()
     }
     
-    func saveText() {
-        
-    }
-    
     func saveDrawing() {
+        let rect = CGRect(origin: .zero, size: imageSize)
+        let renderer = UIGraphicsImageRenderer(size: imageSize)
         
+        let generatedTextsView = ZStack {
+            ForEach(textBoxes) { box in
+                Text(box.text)
+                    .textBoxStyle(textBox: box)
+                    .position(box.location)
+            }
+        }
+        let controller = UIHostingController(rootView: generatedTextsView)
+        guard let textsView = controller.view else { return }
+        textsView.frame = canvas.frame
+        textsView.backgroundColor = .clear
+        print(canvas.frame.size)
+        
+        let image = renderer.image { context in
+            canvas.drawHierarchy(in: rect, afterScreenUpdates: true)
+            textsView.drawHierarchy(in: rect, afterScreenUpdates: true)
+        }
+        
+        selectedImage = image
     }
 }
 

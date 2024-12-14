@@ -11,12 +11,9 @@ struct EditingView: View {
     @EnvironmentObject var viewModel: EditingViewModel
     
     var body: some View {
-        ZStack {
-            Image(uiImage: viewModel.selectedImage ?? UIImage())
-                .resizable()
-                .scaledToFit()
-        }
-        .ignoresSafeArea(.keyboard)
+        Image(uiImage: viewModel.selectedImage ?? UIImage())
+            .resizable()
+            .scaledToFit()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button("Revert") {
