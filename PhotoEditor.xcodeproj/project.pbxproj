@@ -7,75 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		821ACE2D2D0C3DA900D0924A /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE2C2D0C3DA900D0924A /* DrawingView.swift */; };
-		821ACE2F2D0C40DC00D0924A /* EditingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE2E2D0C40D500D0924A /* EditingViewModel.swift */; };
-		821ACE352D0C4A4100D0924A /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE342D0C4A3E00D0924A /* CanvasView.swift */; };
-		821ACE392D0C781A00D0924A /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE382D0C781100D0924A /* TextBox.swift */; };
-		821ACE3B2D0CA6DB00D0924A /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE3A2D0CA6D700D0924A /* InitialView.swift */; };
-		821ACE412D0CAB3200D0924A /* EditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE402D0CAB3000D0924A /* EditingView.swift */; };
-		821ACE442D0CAFEA00D0924A /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE432D0CAFE300D0924A /* TextModifier.swift */; };
-		821ACE462D0CB01300D0924A /* BarButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE452D0CAFF400D0924A /* BarButtonModifier.swift */; };
-		821ACE482D0CB21400D0924A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE472D0CB20D00D0924A /* ViewExtension.swift */; };
-		821ACE4E2D0CC06300D0924A /* AddingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE4D2D0CC06300D0924A /* AddingTextView.swift */; };
-		821ACE502D0CD8CA00D0924A /* TextToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE4F2D0CD8BB00D0924A /* TextToolBar.swift */; };
-		821ACE5B2D0CFD7200D0924A /* TextBoxModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE5A2D0CFD6D00D0924A /* TextBoxModifier.swift */; };
-		821ACE5D2D0D234900D0924A /* TextBoxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE5C2D0D234100D0924A /* TextBoxesView.swift */; };
-		821ACE5F2D0D2F6A00D0924A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACE5E2D0D2F6400D0924A /* AuthViewModel.swift */; };
+		821ACF422D0D319A00D0924A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821ACF392D0D319A00D0924A /* Preview Assets.xcassets */; };
+		821ACF432D0D319A00D0924A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821ACF3D2D0D319A00D0924A /* Assets.xcassets */; };
+		821ACF442D0D319A00D0924A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 821ACF3F2D0D319A00D0924A /* Info.plist */; };
+		821ACF452D0D319A00D0924A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF0C2D0D319A00D0924A /* ViewExtension.swift */; };
+		821ACF462D0D319A00D0924A /* BarButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF0E2D0D319A00D0924A /* BarButtonModifier.swift */; };
+		821ACF472D0D319A00D0924A /* CapsuleButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF0F2D0D319A00D0924A /* CapsuleButtonModifier.swift */; };
+		821ACF482D0D319A00D0924A /* FieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF102D0D319A00D0924A /* FieldModifier.swift */; };
+		821ACF492D0D319A00D0924A /* TextBoxModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF112D0D319A00D0924A /* TextBoxModifier.swift */; };
+		821ACF4A2D0D319A00D0924A /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF122D0D319A00D0924A /* TextModifier.swift */; };
+		821ACF4B2D0D319A00D0924A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF152D0D319A00D0924A /* AuthView.swift */; };
+		821ACF4C2D0D319A00D0924A /* GoogleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF162D0D319A00D0924A /* GoogleLogo.swift */; };
+		821ACF4D2D0D319A00D0924A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF182D0D319A00D0924A /* AuthViewModel.swift */; };
+		821ACF4E2D0D319A00D0924A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF1B2D0D319A00D0924A /* Mode.swift */; };
+		821ACF4F2D0D319A00D0924A /* PickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF1C2D0D319A00D0924A /* PickerType.swift */; };
+		821ACF502D0D319A00D0924A /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF1D2D0D319A00D0924A /* TextBox.swift */; };
+		821ACF512D0D319A00D0924A /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF1F2D0D319A00D0924A /* ActivityView.swift */; };
+		821ACF522D0D319A00D0924A /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF202D0D319A00D0924A /* CanvasView.swift */; };
+		821ACF532D0D319A00D0924A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF212D0D319A00D0924A /* ImagePicker.swift */; };
+		821ACF542D0D319A00D0924A /* AddingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF232D0D319A00D0924A /* AddingTextView.swift */; };
+		821ACF552D0D319A00D0924A /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF242D0D319A00D0924A /* DrawingView.swift */; };
+		821ACF562D0D319A00D0924A /* TextBoxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF252D0D319A00D0924A /* TextBoxesView.swift */; };
+		821ACF572D0D319A00D0924A /* TextToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF262D0D319A00D0924A /* TextToolBar.swift */; };
+		821ACF582D0D319A00D0924A /* EditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF282D0D319A00D0924A /* EditingView.swift */; };
+		821ACF592D0D319A00D0924A /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF292D0D319A00D0924A /* InitialView.swift */; };
+		821ACF5A2D0D319A00D0924A /* NormalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF2A2D0D319A00D0924A /* NormalView.swift */; };
+		821ACF5B2D0D319A00D0924A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF2C2D0D319A00D0924A /* MainView.swift */; };
+		821ACF5C2D0D319A00D0924A /* EditingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF2E2D0D319A00D0924A /* EditingViewModel.swift */; };
+		821ACF5D2D0D319A00D0924A /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF312D0D319A00D0924A /* RecoveryView.swift */; };
+		821ACF5E2D0D319A00D0924A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF342D0D319A00D0924A /* SignUpView.swift */; };
+		821ACF5F2D0D319A00D0924A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF3B2D0D319A00D0924A /* TitleView.swift */; };
+		821ACF602D0D319A00D0924A /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF3E2D0D319A00D0924A /* GlobalConstants.swift */; };
+		821ACF612D0D319A00D0924A /* PhotoEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821ACF402D0D319A00D0924A /* PhotoEditorApp.swift */; };
 		823CF1462D0A0698005AD74A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1452D0A0698005AD74A /* .gitignore */; };
-		823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF14A2D0A0866005AD74A /* AuthView.swift */; };
-		823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */; };
-		823CF14F2D0A0866005AD74A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1472D0A0866005AD74A /* Preview Assets.xcassets */; };
-		823CF1502D0A0866005AD74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823CF1492D0A0866005AD74A /* Assets.xcassets */; };
-		823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1782D0A1814005AD74A /* FieldModifier.swift */; };
-		823CF17B2D0A18BA005AD74A /* CapsuleButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF17A2D0A18AF005AD74A /* CapsuleButtonModifier.swift */; };
-		823CF1832D0A1F67005AD74A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1822D0A1F5F005AD74A /* SignUpView.swift */; };
-		823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */; };
-		823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */; };
-		823CF1A82D0A4A0F005AD74A /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1A72D0A49F8005AD74A /* RecoveryView.swift */; };
-		823CF1D32D0A6BEE005AD74A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CF1D22D0A6BE0005AD74A /* MainView.swift */; };
-		82FA16C22D0B1763003A676F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C12D0B175F003A676F /* TitleView.swift */; };
-		82FA16C42D0B1CD5003A676F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C32D0B1CCC003A676F /* ImagePicker.swift */; };
-		82FA16C62D0B49AE003A676F /* PickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16C52D0B49A3003A676F /* PickerType.swift */; };
-		82FA16CB2D0B6DA4003A676F /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16CA2D0B6D9C003A676F /* ActivityView.swift */; };
-		82FA16DA2D0B6F61003A676F /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16D92D0B6F5B003A676F /* Mode.swift */; };
-		82FA16DC2D0B8866003A676F /* NormalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FA16DB2D0B8862003A676F /* NormalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		821ACE2C2D0C3DA900D0924A /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
-		821ACE2E2D0C40D500D0924A /* EditingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewModel.swift; sourceTree = "<group>"; };
-		821ACE342D0C4A3E00D0924A /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
-		821ACE382D0C781100D0924A /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
-		821ACE3A2D0CA6D700D0924A /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
-		821ACE402D0CAB3000D0924A /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
-		821ACE432D0CAFE300D0924A /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
-		821ACE452D0CAFF400D0924A /* BarButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonModifier.swift; sourceTree = "<group>"; };
-		821ACE472D0CB20D00D0924A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		821ACE4D2D0CC06300D0924A /* AddingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingTextView.swift; sourceTree = "<group>"; };
-		821ACE4F2D0CD8BB00D0924A /* TextToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToolBar.swift; sourceTree = "<group>"; };
-		821ACE5A2D0CFD6D00D0924A /* TextBoxModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModifier.swift; sourceTree = "<group>"; };
-		821ACE5C2D0D234100D0924A /* TextBoxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxesView.swift; sourceTree = "<group>"; };
-		821ACE5E2D0D2F6400D0924A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		821ACF0C2D0D319A00D0924A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		821ACF0E2D0D319A00D0924A /* BarButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonModifier.swift; sourceTree = "<group>"; };
+		821ACF0F2D0D319A00D0924A /* CapsuleButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonModifier.swift; sourceTree = "<group>"; };
+		821ACF102D0D319A00D0924A /* FieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldModifier.swift; sourceTree = "<group>"; };
+		821ACF112D0D319A00D0924A /* TextBoxModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxModifier.swift; sourceTree = "<group>"; };
+		821ACF122D0D319A00D0924A /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
+		821ACF152D0D319A00D0924A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		821ACF162D0D319A00D0924A /* GoogleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogo.swift; sourceTree = "<group>"; };
+		821ACF182D0D319A00D0924A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		821ACF1B2D0D319A00D0924A /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		821ACF1C2D0D319A00D0924A /* PickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerType.swift; sourceTree = "<group>"; };
+		821ACF1D2D0D319A00D0924A /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
+		821ACF1F2D0D319A00D0924A /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		821ACF202D0D319A00D0924A /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		821ACF212D0D319A00D0924A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		821ACF232D0D319A00D0924A /* AddingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingTextView.swift; sourceTree = "<group>"; };
+		821ACF242D0D319A00D0924A /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		821ACF252D0D319A00D0924A /* TextBoxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxesView.swift; sourceTree = "<group>"; };
+		821ACF262D0D319A00D0924A /* TextToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToolBar.swift; sourceTree = "<group>"; };
+		821ACF282D0D319A00D0924A /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
+		821ACF292D0D319A00D0924A /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		821ACF2A2D0D319A00D0924A /* NormalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalView.swift; sourceTree = "<group>"; };
+		821ACF2C2D0D319A00D0924A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		821ACF2E2D0D319A00D0924A /* EditingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewModel.swift; sourceTree = "<group>"; };
+		821ACF312D0D319A00D0924A /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
+		821ACF342D0D319A00D0924A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		821ACF392D0D319A00D0924A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		821ACF3B2D0D319A00D0924A /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		821ACF3D2D0D319A00D0924A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		821ACF3E2D0D319A00D0924A /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		821ACF3F2D0D319A00D0924A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		821ACF402D0D319A00D0924A /* PhotoEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorApp.swift; sourceTree = "<group>"; };
 		823CF1342D0A062A005AD74A /* PhotoEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823CF1452D0A0698005AD74A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		823CF1472D0A0866005AD74A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		823CF1492D0A0866005AD74A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		823CF14A2D0A0866005AD74A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorApp.swift; sourceTree = "<group>"; };
-		823CF1782D0A1814005AD74A /* FieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldModifier.swift; sourceTree = "<group>"; };
-		823CF17A2D0A18AF005AD74A /* CapsuleButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonModifier.swift; sourceTree = "<group>"; };
-		823CF1822D0A1F5F005AD74A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogo.swift; sourceTree = "<group>"; };
-		823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
-		823CF1A72D0A49F8005AD74A /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
-		823CF1D22D0A6BE0005AD74A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		82FA16C12D0B175F003A676F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		82FA16C32D0B1CCC003A676F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		82FA16C52D0B49A3003A676F /* PickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerType.swift; sourceTree = "<group>"; };
-		82FA16C92D0B5F9D003A676F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		82FA16CA2D0B6D9C003A676F /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		82FA16D92D0B6F5B003A676F /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
-		82FA16DB2D0B8862003A676F /* NormalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,59 +90,218 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		821ACE322D0C467200D0924A /* SupportingViews */ = {
+		821ACF0D2D0D319A00D0924A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				82FA16C12D0B175F003A676F /* TitleView.swift */,
-			);
-			path = SupportingViews;
-			sourceTree = "<group>";
-		};
-		821ACE332D0C4A1E00D0924A /* Representables */ = {
-			isa = PBXGroup;
-			children = (
-				821ACE342D0C4A3E00D0924A /* CanvasView.swift */,
-				82FA16CA2D0B6D9C003A676F /* ActivityView.swift */,
-				82FA16C32D0B1CCC003A676F /* ImagePicker.swift */,
-			);
-			path = Representables;
-			sourceTree = "<group>";
-		};
-		821ACE422D0CAF9E00D0924A /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				821ACE3A2D0CA6D700D0924A /* InitialView.swift */,
-				82FA16DB2D0B8862003A676F /* NormalView.swift */,
-				821ACE402D0CAB3000D0924A /* EditingView.swift */,
-				821ACE4C2D0CC03900D0924A /* DrawingView */,
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
-		821ACE492D0CB30400D0924A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				821ACE472D0CB20D00D0924A /* ViewExtension.swift */,
+				821ACF0C2D0D319A00D0924A /* ViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		821ACE4C2D0CC03900D0924A /* DrawingView */ = {
+		821ACF132D0D319A00D0924A /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				821ACE2C2D0C3DA900D0924A /* DrawingView.swift */,
-				821ACE5C2D0D234100D0924A /* TextBoxesView.swift */,
-				821ACE4D2D0CC06300D0924A /* AddingTextView.swift */,
-				821ACE4F2D0CD8BB00D0924A /* TextToolBar.swift */,
+				821ACF0E2D0D319A00D0924A /* BarButtonModifier.swift */,
+				821ACF0F2D0D319A00D0924A /* CapsuleButtonModifier.swift */,
+				821ACF102D0D319A00D0924A /* FieldModifier.swift */,
+				821ACF112D0D319A00D0924A /* TextBoxModifier.swift */,
+				821ACF122D0D319A00D0924A /* TextModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		821ACF142D0D319A00D0924A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		821ACF172D0D319A00D0924A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF152D0D319A00D0924A /* AuthView.swift */,
+				821ACF162D0D319A00D0924A /* GoogleLogo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821ACF192D0D319A00D0924A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF182D0D319A00D0924A /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		821ACF1A2D0D319A00D0924A /* AuthModule */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF172D0D319A00D0924A /* View */,
+				821ACF192D0D319A00D0924A /* ViewModel */,
+				821ACF142D0D319A00D0924A /* Model */,
+			);
+			path = AuthModule;
+			sourceTree = "<group>";
+		};
+		821ACF1E2D0D319A00D0924A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF1B2D0D319A00D0924A /* Mode.swift */,
+				821ACF1C2D0D319A00D0924A /* PickerType.swift */,
+				821ACF1D2D0D319A00D0924A /* TextBox.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		821ACF222D0D319A00D0924A /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF1F2D0D319A00D0924A /* ActivityView.swift */,
+				821ACF202D0D319A00D0924A /* CanvasView.swift */,
+				821ACF212D0D319A00D0924A /* ImagePicker.swift */,
+			);
+			path = Representables;
+			sourceTree = "<group>";
+		};
+		821ACF272D0D319A00D0924A /* DrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF232D0D319A00D0924A /* AddingTextView.swift */,
+				821ACF242D0D319A00D0924A /* DrawingView.swift */,
+				821ACF252D0D319A00D0924A /* TextBoxesView.swift */,
+				821ACF262D0D319A00D0924A /* TextToolBar.swift */,
 			);
 			path = DrawingView;
+			sourceTree = "<group>";
+		};
+		821ACF2B2D0D319A00D0924A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF272D0D319A00D0924A /* DrawingView */,
+				821ACF282D0D319A00D0924A /* EditingView.swift */,
+				821ACF292D0D319A00D0924A /* InitialView.swift */,
+				821ACF2A2D0D319A00D0924A /* NormalView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		821ACF2D2D0D319A00D0924A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF222D0D319A00D0924A /* Representables */,
+				821ACF2B2D0D319A00D0924A /* Subviews */,
+				821ACF2C2D0D319A00D0924A /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821ACF2F2D0D319A00D0924A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF2E2D0D319A00D0924A /* EditingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		821ACF302D0D319A00D0924A /* PhotoEditModule */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF2D2D0D319A00D0924A /* View */,
+				821ACF2F2D0D319A00D0924A /* ViewModel */,
+				821ACF1E2D0D319A00D0924A /* Model */,
+			);
+			path = PhotoEditModule;
+			sourceTree = "<group>";
+		};
+		821ACF322D0D319A00D0924A /* RecoveryModule */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF312D0D319A00D0924A /* RecoveryView.swift */,
+			);
+			path = RecoveryModule;
+			sourceTree = "<group>";
+		};
+		821ACF332D0D319A00D0924A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		821ACF352D0D319A00D0924A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF342D0D319A00D0924A /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821ACF362D0D319A00D0924A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		821ACF372D0D319A00D0924A /* SignUpModule */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF352D0D319A00D0924A /* View */,
+				821ACF362D0D319A00D0924A /* ViewModel */,
+				821ACF332D0D319A00D0924A /* Model */,
+			);
+			path = SignUpModule;
+			sourceTree = "<group>";
+		};
+		821ACF382D0D319A00D0924A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF1A2D0D319A00D0924A /* AuthModule */,
+				821ACF302D0D319A00D0924A /* PhotoEditModule */,
+				821ACF322D0D319A00D0924A /* RecoveryModule */,
+				821ACF372D0D319A00D0924A /* SignUpModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		821ACF3A2D0D319A00D0924A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF392D0D319A00D0924A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		821ACF3C2D0D319A00D0924A /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF3B2D0D319A00D0924A /* TitleView.swift */,
+			);
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		821ACF412D0D319A00D0924A /* PhotoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				821ACF382D0D319A00D0924A /* Modules */,
+				821ACF3F2D0D319A00D0924A /* Info.plist */,
+				821ACF3C2D0D319A00D0924A /* SupportingViews */,
+				821ACF0D2D0D319A00D0924A /* Extensions */,
+				821ACF132D0D319A00D0924A /* Modifiers */,
+				821ACF3E2D0D319A00D0924A /* GlobalConstants.swift */,
+			);
+			path = PhotoEditor;
 			sourceTree = "<group>";
 		};
 		823CF12B2D0A062A005AD74A = {
 			isa = PBXGroup;
 			children = (
 				823CF1452D0A0698005AD74A /* .gitignore */,
-				823CF14C2D0A0866005AD74A /* PhotoEditor */,
+				821ACF3A2D0D319A00D0924A /* Preview Content */,
+				821ACF402D0D319A00D0924A /* PhotoEditorApp.swift */,
+				821ACF3D2D0D319A00D0924A /* Assets.xcassets */,
+				821ACF412D0D319A00D0924A /* PhotoEditor */,
 				823CF1352D0A062A005AD74A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,165 +312,6 @@
 				823CF1342D0A062A005AD74A /* PhotoEditor.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		823CF1482D0A0866005AD74A /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				823CF1472D0A0866005AD74A /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		823CF14C2D0A0866005AD74A /* PhotoEditor */ = {
-			isa = PBXGroup;
-			children = (
-				82FA16C92D0B5F9D003A676F /* Info.plist */,
-				823CF1482D0A0866005AD74A /* Preview Content */,
-				823CF1492D0A0866005AD74A /* Assets.xcassets */,
-				823CF14B2D0A0866005AD74A /* PhotoEditorApp.swift */,
-				823CF1512D0A08E4005AD74A /* Modules */,
-				821ACE322D0C467200D0924A /* SupportingViews */,
-				821ACE492D0CB30400D0924A /* Extensions */,
-				823CF1772D0A17F6005AD74A /* Modifiers */,
-				823CF1912D0A3FCE005AD74A /* GlobalConstants.swift */,
-			);
-			path = PhotoEditor;
-			sourceTree = "<group>";
-		};
-		823CF1512D0A08E4005AD74A /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				823CF1522D0A08EA005AD74A /* AuthModule */,
-				823CF1532D0A08F5005AD74A /* SignUpModule */,
-				823CF1552D0A09D7005AD74A /* RecoveryModule */,
-				823CF1542D0A0900005AD74A /* PhotoEditModule */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		823CF1522D0A08EA005AD74A /* AuthModule */ = {
-			isa = PBXGroup;
-			children = (
-				823CF17C2D0A1A68005AD74A /* View */,
-				823CF17D2D0A1A6D005AD74A /* ViewModel */,
-				823CF17E2D0A1A71005AD74A /* Model */,
-			);
-			path = AuthModule;
-			sourceTree = "<group>";
-		};
-		823CF1532D0A08F5005AD74A /* SignUpModule */ = {
-			isa = PBXGroup;
-			children = (
-				823CF17F2D0A1F3F005AD74A /* View */,
-				823CF1812D0A1F53005AD74A /* ViewModel */,
-				823CF1802D0A1F49005AD74A /* Model */,
-			);
-			path = SignUpModule;
-			sourceTree = "<group>";
-		};
-		823CF1542D0A0900005AD74A /* PhotoEditModule */ = {
-			isa = PBXGroup;
-			children = (
-				823CF1D12D0A6BD5005AD74A /* View */,
-				823CF1D02D0A6BCF005AD74A /* ViewModel */,
-				823CF1CF2D0A6BC9005AD74A /* Model */,
-			);
-			path = PhotoEditModule;
-			sourceTree = "<group>";
-		};
-		823CF1552D0A09D7005AD74A /* RecoveryModule */ = {
-			isa = PBXGroup;
-			children = (
-				823CF1A72D0A49F8005AD74A /* RecoveryView.swift */,
-			);
-			path = RecoveryModule;
-			sourceTree = "<group>";
-		};
-		823CF1772D0A17F6005AD74A /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				823CF17A2D0A18AF005AD74A /* CapsuleButtonModifier.swift */,
-				821ACE452D0CAFF400D0924A /* BarButtonModifier.swift */,
-				821ACE432D0CAFE300D0924A /* TextModifier.swift */,
-				821ACE5A2D0CFD6D00D0924A /* TextBoxModifier.swift */,
-				823CF1782D0A1814005AD74A /* FieldModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		823CF17C2D0A1A68005AD74A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				823CF14A2D0A0866005AD74A /* AuthView.swift */,
-				823CF18F2D0A29FB005AD74A /* GoogleLogo.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		823CF17D2D0A1A6D005AD74A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				821ACE5E2D0D2F6400D0924A /* AuthViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		823CF17E2D0A1A71005AD74A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		823CF17F2D0A1F3F005AD74A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				823CF1822D0A1F5F005AD74A /* SignUpView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		823CF1802D0A1F49005AD74A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		823CF1812D0A1F53005AD74A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		823CF1CF2D0A6BC9005AD74A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				82FA16C52D0B49A3003A676F /* PickerType.swift */,
-				821ACE382D0C781100D0924A /* TextBox.swift */,
-				82FA16D92D0B6F5B003A676F /* Mode.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		823CF1D02D0A6BCF005AD74A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				821ACE2E2D0C40D500D0924A /* EditingViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		823CF1D12D0A6BD5005AD74A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				823CF1D22D0A6BE0005AD74A /* MainView.swift */,
-				821ACE422D0CAF9E00D0924A /* Subviews */,
-				821ACE332D0C4A1E00D0924A /* Representables */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,8 +375,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823CF14F2D0A0866005AD74A /* Preview Assets.xcassets in Resources */,
-				823CF1502D0A0866005AD74A /* Assets.xcassets in Resources */,
+				821ACF422D0D319A00D0924A /* Preview Assets.xcassets in Resources */,
+				821ACF432D0D319A00D0924A /* Assets.xcassets in Resources */,
+				821ACF442D0D319A00D0924A /* Info.plist in Resources */,
 				823CF1462D0A0698005AD74A /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,35 +389,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82FA16C22D0B1763003A676F /* TitleView.swift in Sources */,
-				82FA16C62D0B49AE003A676F /* PickerType.swift in Sources */,
-				821ACE352D0C4A4100D0924A /* CanvasView.swift in Sources */,
-				82FA16DA2D0B6F61003A676F /* Mode.swift in Sources */,
-				821ACE482D0CB21400D0924A /* ViewExtension.swift in Sources */,
-				82FA16CB2D0B6DA4003A676F /* ActivityView.swift in Sources */,
-				823CF1832D0A1F67005AD74A /* SignUpView.swift in Sources */,
-				821ACE2D2D0C3DA900D0924A /* DrawingView.swift in Sources */,
-				823CF1902D0A2A04005AD74A /* GoogleLogo.swift in Sources */,
-				821ACE462D0CB01300D0924A /* BarButtonModifier.swift in Sources */,
-				821ACE4E2D0CC06300D0924A /* AddingTextView.swift in Sources */,
-				821ACE5D2D0D234900D0924A /* TextBoxesView.swift in Sources */,
-				823CF1A82D0A4A0F005AD74A /* RecoveryView.swift in Sources */,
-				821ACE442D0CAFEA00D0924A /* TextModifier.swift in Sources */,
-				821ACE5B2D0CFD7200D0924A /* TextBoxModifier.swift in Sources */,
-				823CF14D2D0A0866005AD74A /* AuthView.swift in Sources */,
-				823CF1792D0A1814005AD74A /* FieldModifier.swift in Sources */,
-				821ACE3B2D0CA6DB00D0924A /* InitialView.swift in Sources */,
-				821ACE502D0CD8CA00D0924A /* TextToolBar.swift in Sources */,
-				821ACE2F2D0C40DC00D0924A /* EditingViewModel.swift in Sources */,
-				823CF1D32D0A6BEE005AD74A /* MainView.swift in Sources */,
-				82FA16C42D0B1CD5003A676F /* ImagePicker.swift in Sources */,
-				823CF1922D0A3FD2005AD74A /* GlobalConstants.swift in Sources */,
-				823CF14E2D0A0866005AD74A /* PhotoEditorApp.swift in Sources */,
-				821ACE5F2D0D2F6A00D0924A /* AuthViewModel.swift in Sources */,
-				821ACE412D0CAB3200D0924A /* EditingView.swift in Sources */,
-				82FA16DC2D0B8866003A676F /* NormalView.swift in Sources */,
-				821ACE392D0C781A00D0924A /* TextBox.swift in Sources */,
-				823CF17B2D0A18BA005AD74A /* CapsuleButtonModifier.swift in Sources */,
+				821ACF452D0D319A00D0924A /* ViewExtension.swift in Sources */,
+				821ACF462D0D319A00D0924A /* BarButtonModifier.swift in Sources */,
+				821ACF472D0D319A00D0924A /* CapsuleButtonModifier.swift in Sources */,
+				821ACF482D0D319A00D0924A /* FieldModifier.swift in Sources */,
+				821ACF492D0D319A00D0924A /* TextBoxModifier.swift in Sources */,
+				821ACF4A2D0D319A00D0924A /* TextModifier.swift in Sources */,
+				821ACF4B2D0D319A00D0924A /* AuthView.swift in Sources */,
+				821ACF4C2D0D319A00D0924A /* GoogleLogo.swift in Sources */,
+				821ACF4D2D0D319A00D0924A /* AuthViewModel.swift in Sources */,
+				821ACF4E2D0D319A00D0924A /* Mode.swift in Sources */,
+				821ACF4F2D0D319A00D0924A /* PickerType.swift in Sources */,
+				821ACF502D0D319A00D0924A /* TextBox.swift in Sources */,
+				821ACF512D0D319A00D0924A /* ActivityView.swift in Sources */,
+				821ACF522D0D319A00D0924A /* CanvasView.swift in Sources */,
+				821ACF532D0D319A00D0924A /* ImagePicker.swift in Sources */,
+				821ACF542D0D319A00D0924A /* AddingTextView.swift in Sources */,
+				821ACF552D0D319A00D0924A /* DrawingView.swift in Sources */,
+				821ACF562D0D319A00D0924A /* TextBoxesView.swift in Sources */,
+				821ACF572D0D319A00D0924A /* TextToolBar.swift in Sources */,
+				821ACF582D0D319A00D0924A /* EditingView.swift in Sources */,
+				821ACF592D0D319A00D0924A /* InitialView.swift in Sources */,
+				821ACF5A2D0D319A00D0924A /* NormalView.swift in Sources */,
+				821ACF5B2D0D319A00D0924A /* MainView.swift in Sources */,
+				821ACF5C2D0D319A00D0924A /* EditingViewModel.swift in Sources */,
+				821ACF5D2D0D319A00D0924A /* RecoveryView.swift in Sources */,
+				821ACF5E2D0D319A00D0924A /* SignUpView.swift in Sources */,
+				821ACF5F2D0D319A00D0924A /* TitleView.swift in Sources */,
+				821ACF602D0D319A00D0924A /* GlobalConstants.swift in Sources */,
+				821ACF612D0D319A00D0924A /* PhotoEditorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,15 +554,11 @@
 				DEVELOPMENT_TEAM = BMJF63URC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhotoEditor/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs permission to use camera to take a photo";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app needs permission to save images to your camera roll";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,13 +566,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studying.PhotoEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -589,15 +583,11 @@
 				DEVELOPMENT_TEAM = BMJF63URC7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PhotoEditor/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs permission to use camera to take a photo";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app needs permission to save images to your camera roll";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,13 +595,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = studying.PhotoEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
