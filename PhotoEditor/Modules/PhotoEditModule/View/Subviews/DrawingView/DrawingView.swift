@@ -40,6 +40,7 @@ struct DrawingView: View {
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button("Cancel") {
+                    viewModel.cancelAppliedDrawing()
                     viewModel.mode = .editing
                 }
                 .barButtonStyle()

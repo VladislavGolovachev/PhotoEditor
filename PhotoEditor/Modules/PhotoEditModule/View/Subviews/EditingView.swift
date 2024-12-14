@@ -16,19 +16,14 @@ struct EditingView: View {
             .scaledToFit()
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-                Button("Revert") {
-                    viewModel.mode = .normal
-                }
-                .barButtonStyle(color: .red)
-            }
-            ToolbarItemGroup(placement: .topBarTrailing) {
                 Button {
                     viewModel.mode = .drawing
                 } label: {
                     Image(systemName: "scribble.variable")
                 }
                 .barButtonStyle(color: .gray)
-                
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 Button("**Save**") {
                     viewModel.mode = .normal
                 }

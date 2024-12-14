@@ -29,8 +29,14 @@ final class EditingViewModel: ObservableObject {
     }
     
     func nullifyImage() {
-        canvas = PKCanvasView()
         selectedImage = nil
+        cancelAppliedDrawing()
+    }
+    
+    func cancelAppliedDrawing() {
+        canvas = PKCanvasView()
+        textBoxes = []
+        imageSize = .zero
     }
     
     func appendTextBox() {
