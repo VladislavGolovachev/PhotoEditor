@@ -15,6 +15,22 @@ struct EditingView: View {
             Image(uiImage: viewModel.selectedImage ?? UIImage())
                 .resizable()
                 .scaledToFit()
+            ForEach(viewModel.textBoxes) { box in
+                Text(box.text)
+                    .textBoxStyle(textBox: box)
+                    .position(box.location)
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                withAnimation {
+                                    viewModel.dragOnChanged(box: box, location: value.location)
+                                }
+                            }
+                            .onEnded({ value in
+                                viewModel.dragOnEnded(box: box, location: value.location)
+                            })
+                    )
+            }
             
             if viewModel.isNewTextBoxBeingAdded {
                 AddingTextView()
@@ -37,7 +53,7 @@ struct EditingView: View {
                 }
                 .barButtonStyle(color: .gray)
                 
-                Button("Save") {
+                Button("**Save**") {
                     viewModel.mode = .normal
                 }
                 .barButtonStyle(color: .yellow)

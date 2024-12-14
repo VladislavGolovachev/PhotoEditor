@@ -9,6 +9,10 @@ import SwiftUI
 
 //MARK: Modifiers
 extension View {
+    func textBoxStyle(textBox: TextBox) -> some View {
+        modifier(TextBoxModifier(textBox: textBox))
+    }
+    
     func capsuleButtonStyle(color: Color) -> some View {
         modifier(CapsuleButtonModifier(color: color))
     }

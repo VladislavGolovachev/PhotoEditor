@@ -20,15 +20,8 @@ struct AddingTextView: View {
             .ignoresSafeArea()
         
         TextField("Text", text: $viewModel.textBoxes[viewModel.currentIndex].text)
-            .font(
-                Font(UIFont(name: textBox.font,
-                            size: textBox.size)! as CTFont)
-                .weight(textBox.isBold ? .bold : .regular)
-            )
-            .foregroundStyle(viewModel.textBoxes[viewModel.currentIndex].textColor)
-            .multilineTextAlignment(.center)
-            .colorScheme(.dark)
-            .padding()
+            .textBoxStyle(textBox: textBox)
+            .position(textBox.location)
         
         HStack() {
             Button("Cancel") {

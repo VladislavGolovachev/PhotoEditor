@@ -44,4 +44,32 @@ final class EditingViewModel: ObservableObject {
     func addTextBox() {
         isNewTextBoxBeingAdded = false
     }
+    
+    func dragOnChanged(box: TextBox, location: CGPoint) {
+        let index = draggableTextBoxIndex(of: box)
+        if box.offset == .zero {
+            textBoxes[index].offset = CGSize(width: box.location.x - location.x,
+                                             height: box.location.y - location.y)
+        }
+        let offset = textBoxes[index].offset
+        textBoxes[index].location = CGPoint(x: location.x + offset.width,
+                                            y: location.y + offset.height)
+    }
+    
+    func dragOnEnded(box: TextBox, location: CGPoint) {
+        let index = draggableTextBoxIndex(of: box)
+        let offset = textBoxes[index].offset
+        
+        textBoxes[index].location = CGPoint(x: location.x + offset.width,
+                                            y: location.y + offset.height)
+        textBoxes[index].offset = .zero
+    }
+    
+    private func draggableTextBoxIndex(of box: TextBox) -> Int {
+        let index = textBoxes.firstIndex { currentBox in
+            currentBox.id == box.id
+        }
+        
+        return index ?? 0
+    }
 }

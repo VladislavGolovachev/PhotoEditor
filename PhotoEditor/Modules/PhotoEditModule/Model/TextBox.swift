@@ -17,5 +17,6 @@ struct TextBox: Identifiable {
     var isBold = false
     var textColor: Color = .white
     
+    var location: CGPoint = CGPoint(x: 200, y: 300)
     var offset: CGSize = .zero
 }
