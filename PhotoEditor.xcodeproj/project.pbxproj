@@ -108,8 +108,8 @@
 			children = (
 				821ACE3A2D0CA6D700D0924A /* InitialView.swift */,
 				82FA16DB2D0B8862003A676F /* NormalView.swift */,
-				821ACE4C2D0CC03900D0924A /* EditingView */,
-				821ACE2C2D0C3DA900D0924A /* DrawingView.swift */,
+				821ACE402D0CAB3000D0924A /* EditingView.swift */,
+				821ACE4C2D0CC03900D0924A /* DrawingView */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -122,14 +122,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		821ACE4C2D0CC03900D0924A /* EditingView */ = {
+		821ACE4C2D0CC03900D0924A /* DrawingView */ = {
 			isa = PBXGroup;
 			children = (
-				821ACE402D0CAB3000D0924A /* EditingView.swift */,
+				821ACE2C2D0C3DA900D0924A /* DrawingView.swift */,
 				821ACE4D2D0CC06300D0924A /* AddingTextView.swift */,
 				821ACE4F2D0CD8BB00D0924A /* TextToolBar.swift */,
 			);
-			path = EditingView;
+			path = DrawingView;
 			sourceTree = "<group>";
 		};
 		823CF12B2D0A062A005AD74A = {

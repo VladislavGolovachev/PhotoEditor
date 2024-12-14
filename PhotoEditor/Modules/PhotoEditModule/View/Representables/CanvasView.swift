@@ -27,9 +27,8 @@ struct CanvasView: UIViewRepresentable {
             subview.addSubview(imageView)
             subview.sendSubviewToBack(imageView)
             
-            viewModel.toolPicker.setVisible(true, forFirstResponder: viewModel.canvas)
+            viewModel.showToolPicker()
             viewModel.toolPicker.addObserver(viewModel.canvas)
-            viewModel.canvas.becomeFirstResponder()
         }
         
         return viewModel.canvas

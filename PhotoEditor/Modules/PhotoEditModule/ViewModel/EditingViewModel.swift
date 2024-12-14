@@ -22,6 +22,8 @@ final class EditingViewModel: ObservableObject {
     @Published var isNewTextBoxBeingAdded = false
     @Published var currentIndex = 0
     
+    @Published var imageRect: CGRect = .zero
+    
     func isImageEmpty() -> Bool {
         return selectedImage == nil
     }
@@ -65,6 +67,27 @@ final class EditingViewModel: ObservableObject {
         textBoxes[index].offset = .zero
     }
     
+    func showToolPicker() {
+        toolPicker.setVisible(true, forFirstResponder: canvas)
+        canvas.becomeFirstResponder()
+    }
+    
+    func hideToolPicker() {
+        toolPicker.setVisible(false, forFirstResponder: canvas)
+        canvas.resignFirstResponder()
+    }
+    
+    func saveText() {
+        
+    }
+    
+    func saveDrawing() {
+        
+    }
+}
+
+//MARK: Private Functions
+extension EditingViewModel {
     private func draggableTextBoxIndex(of box: TextBox) -> Int {
         let index = textBoxes.firstIndex { currentBox in
             currentBox.id == box.id
